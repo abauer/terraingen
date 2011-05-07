@@ -47,7 +47,7 @@ public class Generate
 	public static int row23[] = new int[39];
 	public static int row24[] = new int[39];
 	public static int row25[] = new int[39];
-	public static int rand1, rand2, rand3, rand4, rand5, rand6;
+	public static int rand1, rand2, rand3, rand4, rand5, rand6, rand7, rand8, rand9, rand10;
 
 	public static void getSeed()
 	{
@@ -96,6 +96,47 @@ public class Generate
 			rand6 = rand2 - rand3;
 		}
 
+		if (rand5 > rand2)
+		{
+			rand7 = rand5 - rand2;
+		}
+		else
+		{
+			rand7 = rand2 - rand5;
+		}
+
+		if (rand3 > rand5)
+		{
+			rand8 = rand3 - rand5;
+			rand8 = rand8 * rand4;
+		}
+		else
+		{
+			rand8 = rand5 - rand3;
+			rand8 = rand8 * rand4;
+		}
+
+		if (rand7 > rand1)
+		{
+			rand9 = rand7 - rand1;
+			rand9 = rand9 * rand4;
+			rand9 = rand9 / 2;
+		}
+		else
+		{
+			rand9 = rand1 - rand7;
+			rand9 = rand9 * rand4;
+			rand9 = rand9 / 2;
+		}
+
+		if (rand9 > rand8)
+		{
+			rand10 = rand9 - rand8;
+		}
+		else
+		{
+			rand10 = rand8 - rand9;
+		}
 	}
 
 	public static void draw()
