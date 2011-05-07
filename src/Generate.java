@@ -20,7 +20,7 @@ import java.util.Random;
 
 public class Generate
 {
-	public static int seed = 0;
+	private static int seed = 0;
 	public static int row0[] = new int[39];
 	public static int row1[] = new int[39];
 	public static int row2[] = new int[39];
@@ -47,7 +47,7 @@ public class Generate
 	public static int row23[] = new int[39];
 	public static int row24[] = new int[39];
 	public static int row25[] = new int[39];
-	public static int rand1, rand2, rand3, rand4, rand5, rand6, rand7, rand8, rand9, rand10;
+	private static int rand1, rand2, rand3, rand4, rand5, rand6, rand7, rand8, rand9, rand10;
 
 	public static void getSeed()
 	{
@@ -55,7 +55,7 @@ public class Generate
 		Generate.makeSeeds();
 	}
 
-	public static void makeSeeds()
+	private static void makeSeeds()
 	{
 		// Makes seeds from seeds
 		// See documentation for an explanation
@@ -139,13 +139,7 @@ public class Generate
 		}
 	}
 
-	public static void draw()
-	{
-		Generate.setConstants();
-		Generate.assignRandom();
-	}
-
-	private static void setConstants()
+	public static void setConstants()
 	{
 		// First five rows with "air"
 		Arrays.fill(row0,0);

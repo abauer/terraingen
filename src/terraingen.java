@@ -39,8 +39,7 @@ public class terraingen extends java.applet.Applet
 			else
 			{
 				g.drawString("Debug: Ignoring mouse click(s). Already prompted for seed.",20,20);
-				//Generate.draw();
-				Generate.assignRandom();
+				//Draw.draw();
 			}
 		}
 	}
