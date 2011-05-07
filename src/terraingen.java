@@ -9,7 +9,6 @@ import java.awt.*;
 public class terraingen extends java.applet.Applet
 {
 	int numClicks;
-	int seed;
 
 	public void init()
 	{
@@ -23,22 +22,24 @@ public class terraingen extends java.applet.Applet
 			g.drawString("Debug: Prompting for seed...",20,20);
 			numClicks++;
 			repaint();
-
-			// Generate.getSeed();
-			// method above will be:
-			seed = Expo.enterIntGUI("Enter Seed (Leave blank for random seed)");
+			Generate.getSeed();
+			if (Generate.seed == 0)
+			{
+				numClicks = 1;
+			}
 		}
 		else
 		{
 			if (numClicks < 1)
 			{
 				g.drawString("Debug: Waiting for mouse click.",20,20);
-				// Menu.drawMain(g);
-				// Menu.drawDirections(g);
+			//	Menu.drawMain(g);
+			//	Menu.drawDirections(g);
 			}
 			else
 			{
-				g.drawString("Debug: Ignoring mouse click. Already prompted for seed.",20,20);
+				g.drawString("Debug: Ignoring mouse click(s). Already prompted for seed.",20,20);
+				//Generate.draw();
 			}
 		}
 	}
