@@ -231,6 +231,73 @@ public class Generate
 		//Top Rock Zone    //
 		/////////////////////
 
+		//////////////////////////////////////////////////////////////////////// row11
+		// Set 75% Rock (1)
+		Random row11Rock = new Random();
+		for(int k=0;k<=30;k++)
+		{
+			int row11RockIndex = row11Rock.nextInt(39);
+			row11[row11RockIndex] = 2;
+		}
+
+		// Set 25% Iron (2)
+		Random row11Iron = new Random();
+		for(int k=0;k<=10;k++)
+		{
+			int row11IronIndex = row11Iron.nextInt(39);
+			row11[row11IronIndex] = 4;
+		}
+
+		//////////////////////////////////////////////////////////////////////// row12
+		// Set 75% Rock (1)
+		Random row12Rock = new Random();
+		for(int k=0;k<=30;k++)
+		{
+			int row12RockIndex = row12Rock.nextInt(39);
+			row12[row12RockIndex] = 2;
+		}
+
+		// Set 25% Iron (2)
+		Random row12Iron = new Random();
+		for(int k=0;k<=10;k++)
+		{
+			int row12IronIndex = row12Iron.nextInt(39);
+			row12[row12IronIndex] = 4;
+		}
+
+		//////////////////////////////////////////////////////////////////////// row13
+		// Set 75% Rock (1)
+		Random row13Rock = new Random();
+		for(int k=0;k<=30;k++)
+		{
+			int row13RockIndex = row13Rock.nextInt(39);
+			row13[row13RockIndex] = 2;
+		}
+
+		// Set 25% Iron (2)
+		Random row13Iron = new Random();
+		for(int k=0;k<=10;k++)
+		{
+			int row13IronIndex = row13Iron.nextInt(39);
+			row13[row13IronIndex] = 4;
+		}
+
+		//////////////////////////////////////////////////////////////////////// row14
+		// Set 75% Rock (1)
+		Random row14Rock = new Random();
+		for(int k=0;k<=30;k++)
+		{
+			int row14RockIndex = row14Rock.nextInt(39);
+			row14[row14RockIndex] = 2;
+		}
+
+		// Set 25% Iron (2)
+		Random row14Iron = new Random();
+		for(int k=0;k<=10;k++)
+		{
+			int row14IronIndex = row14Iron.nextInt(39);
+			row14[row14IronIndex] = 4;
+		}
 		/////////////////////
 		//Mid Rock Zone    //
 		/////////////////////
