@@ -16,6 +16,7 @@
  */
 
 import java.util.Arrays;
+import java.util.Random;
 
 public class Generate
 {
@@ -46,32 +47,55 @@ public class Generate
 	public static int row23[] = new int[39];
 	public static int row24[] = new int[39];
 	public static int row25[] = new int[39];
+	public static int rand1, rand2, rand3, rand4, rand5, rand6;
 
 	public static void getSeed()
 	{
 		seed = Expo.enterIntGUI("Enter Seed (Leave blank for random seed)");
-		Generate.seeds();
+		Generate.makeSeeds();
 	}
 
-	public static void seeds();
+	public static void makeSeeds()
 	{
 		// Makes seeds from seeds
 		// See documentation for an explanation
 
-		/*
-		 * Make random # from entered seed
-		 *
-		 * Use that # as seed for new random #
-		 *
-		 * If first rand. # > second rand. # --> subtract 1st # from 2nd # to get a third # (else do vice versa)
-		 *
-		 * Take 3rd # and make another rand # with it
-		 *
-		 * Compare the 3rd number to 1st and 2nd #'s (separately) and do same subtration as above to make 4th and 5th random #
-		 *
-		 * That should be it??
-		 *
-		 */
+		Random random1 = new Random(seed);
+		rand1 = random1.nextInt(1001) + 0;
+
+		Random random2 = new Random(rand1);
+		rand2 = random2.nextInt(1001) + 0;
+
+		if (rand1 > rand2)
+		{
+			rand3 = rand1-rand2;
+		}
+		else
+		{
+			rand3 = rand2-rand1;
+		}
+
+		Random random4 = new Random(rand3);
+		rand4 = random4.nextInt(1001) + 0;
+
+		if (rand3 > rand1)
+		{
+			rand5 = rand3 - rand1;
+		}
+		else
+		{
+			rand5 = rand1 - rand3;
+		}
+
+		if (rand3 > rand2)
+		{
+			rand6 = rand3 - rand2;
+		}
+		else
+		{
+			rand6 = rand2 - rand3;
+		}
+
 	}
 
 	public static void draw()
