@@ -14,7 +14,30 @@ public class Draw
 		Draw.go();
 	}
 
-	public static void go()
+	private static void go()
+	{
+		Draw.drawSky();
+		Draw.drawGround();
+		Draw.drawRock();
+		Draw.drawBedrock();
+	}
+
+	private static void drawSky()
+	{
+
+	}
+
+	private static void drawGround()
+	{
+
+	}
+
+	private static void drawRock()
+	{
+
+	}
+
+	private static void drawBedrock()
 	{
 
 	}

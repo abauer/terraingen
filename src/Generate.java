@@ -11,8 +11,8 @@
  *	3 - Diamond
  *	4 - Iron
  *	5 - Redstone
- *	6 - Gravel
- *	7 - Bedrock
+ *	6 - Bedrock
+ *	7 - Dirt (with grass)
  */
 
 import java.util.Arrays;
@@ -20,7 +20,7 @@ import java.util.Random;
 
 public class Generate
 {
-	private static int seed = 0;
+	public static int seed = 0;
 	public static int row0[] = new int[39];
 	public static int row1[] = new int[39];
 	public static int row2[] = new int[39];
@@ -149,14 +149,14 @@ public class Generate
 		Arrays.fill(row4,0);
 
 		// First four land rows with "dirt"
-		Arrays.fill(row5,1);
+		Arrays.fill(row5,7);
 		Arrays.fill(row6,1);
 		Arrays.fill(row7,1);
 		Arrays.fill(row8,1);
 
 		// Final 2 rows with "bedrock"
-		Arrays.fill(row24,7);
-		Arrays.fill(row25,7);
+		Arrays.fill(row24,6);
+		Arrays.fill(row25,6);
 
 		// All others with "rock" (for now)
 
