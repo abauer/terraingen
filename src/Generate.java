@@ -187,15 +187,45 @@ public class Generate
 		Arrays.fill(row23,2);
 	}
 
-	private static void assignRandom()
+	public static void assignRandom()
 	{
 		/////////////////////
 		//Intermediate Zone//
 		/////////////////////
 
-		//row9
+		//////////////////////////////////////////////////////////////////////// row9
+		// Set 50% dirt (1)
+		Random row9Dirt = new Random();
+		for(int k=0;k<=20;k++)
+		{
+			int row9DirtIndex = row9Dirt.nextInt(39);
+			row9[row9DirtIndex] = 1;
+		}
 
-		//row10
+		// Set 50% rock (2)
+		Random row9Rock = new Random();
+		for(int k=0;k<=20;k++)
+		{
+			int row9RockIndex = row9Rock.nextInt(39);
+			row9[row9RockIndex] = 2;
+		}
+
+		//////////////////////////////////////////////////////////////////////// row10
+		// Set 50% dirt (1)
+		Random row10Dirt = new Random();
+		for(int k=0;k<=20;k++)
+		{
+			int row10DirtIndex = row10Dirt.nextInt(39);
+			row10[row10DirtIndex] = 1;
+		}
+
+		// Set 50% rock (2)
+		Random row10Rock = new Random();
+		for(int k=0;k<=20;k++)
+		{
+			int row10RockIndex = row10Rock.nextInt(39);
+			row10[row10RockIndex] = 2;
+		}
 
 		/////////////////////
 		//Top Rock Zone    //
