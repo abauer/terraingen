@@ -3,43 +3,60 @@
 // Reads the arrays' indexes
 // Draws the blocks on the screen
 
-import Java.util.Arrays;
+import java.util.Arrays;
+import java.awt.*;
 
-public class Draw
+public class Draw extends java.applet.Applet
 {
-	public static void draw()
+	Image dirt,topdirt,rock,diamond,iron,redstone,bedrock;
+
+	public void draw(Graphics g)
 	{
 		Generate.setConstants();
 		Generate.assignRandom();
-		Draw.go();
+		drawSky(g);
+		drawGround(g);
+		drawRock(g);
+		drawBedrock(g);
 	}
 
-	private static void go()
+	public void init()
 	{
-		Draw.drawSky();
-		Draw.drawGround();
-		Draw.drawRock();
-		Draw.drawBedrock();
+		dirt = getImage(getDocumentBase(),"dirt.png");
+		topdirt = getImage(getDocumentBase(),"topdirt.png");
+		rock = getImage(getDocumentBase(),"rock.png");
+		diamond = getImage(getDocumentBase(),"diamond.png");
+		iron = getImage(getDocumentBase(),"iron.png");
+		redstone = getImage(getDocumentBase(),"redstone.png");
+		bedrock = getImage(getDocumentBase(),"bedrock.png");
 	}
 
-	private static void drawSky()
+	private void drawSky(Graphics g)
 	{
-
+		g.drawImage(dirt,0,0,this);
+		g.drawImage(dirt,600,150,this);
+		g.drawImage(dirt,300,400,this);
 	}
 
-	private static void drawGround()
+	private void drawGround(Graphics g)
 	{
-
+		g.drawImage(dirt,0,0,this);
+		g.drawImage(dirt,600,150,this);
+		g.drawImage(dirt,300,400,this);
 	}
 
-	private static void drawRock()
+	private void drawRock(Graphics g)
 	{
-
+		g.drawImage(dirt,0,0,this);
+		g.drawImage(dirt,600,150,this);
+		g.drawImage(dirt,300,400,this);
 	}
 
-	private static void drawBedrock()
+	private void drawBedrock(Graphics g)
 	{
-
+		g.drawImage(dirt,0,0,this);
+		g.drawImage(dirt,600,150,this);
+		g.drawImage(dirt,300,400,this);
 	}
 
 }

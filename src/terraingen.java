@@ -10,11 +10,6 @@ public class terraingen extends java.applet.Applet
 {
 	int numClicks;
 
-	public void init()
-	{
-		// add variables here
-	}
-
 	public void paint(Graphics g)
 	{
 		if (numClicks == 1)
