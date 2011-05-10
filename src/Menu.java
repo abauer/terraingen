@@ -13,7 +13,7 @@ public class Menu
 
 	public static void drawDone()
 	{
-		Expo.displayGUI("Generation complete. You may dismiss this popup and enjoy the landscape. To make another, reload program.");
+		Expo.displayGUI("Generation complete!");
 	}
 
 }
