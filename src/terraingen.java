@@ -52,6 +52,8 @@ public class terraingen extends java.applet.Applet
 				drawGround(g);
 				drawRock(g);
 				drawBedrock(g);
+				Expo.delay(3000); // wait 3 seconds
+				Menu.drawDone();
 			}
 		}
 
@@ -79,7 +81,7 @@ public class terraingen extends java.applet.Applet
 		for(int k=0; k<100;k++)
 		{
 			g.drawImage(topdirt,x,y,this);
-			x += 16;
+			x += 25;
 		}
 	}
 
@@ -96,7 +98,7 @@ public class terraingen extends java.applet.Applet
 		for (int k=0; k <100;k++)
 		{
 			g.drawImage(bedrock,x,y,this);
-			x += 16;
+			x += 25;
 		}
 		// ROW 26
 		x = 0;
@@ -104,7 +106,7 @@ public class terraingen extends java.applet.Applet
 		for (int k=0; k <100;k++)
 		{
 			g.drawImage(bedrock,x,y,this);
-			x += 16;
+			x += 25;
 		}
 
 	}
