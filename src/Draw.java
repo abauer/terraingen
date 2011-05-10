@@ -10,7 +10,7 @@ public class Draw extends java.applet.Applet
 {
 	Image dirt,topdirt,rock,diamond,iron,redstone,bedrock;
 
-	public void draw(Graphics g)
+	public void run(Graphics g)
 	{
 		Generate.setConstants();
 		Generate.assignRandom();
@@ -31,28 +31,28 @@ public class Draw extends java.applet.Applet
 		bedrock = getImage(getDocumentBase(),"bedrock.png");
 	}
 
-	private void drawSky(Graphics g)
+	public void drawSky(Graphics g)
 	{
 		g.drawImage(dirt,0,0,this);
 		g.drawImage(dirt,600,150,this);
 		g.drawImage(dirt,300,400,this);
 	}
 
-	private void drawGround(Graphics g)
+	public void drawGround(Graphics g)
 	{
 		g.drawImage(dirt,0,0,this);
 		g.drawImage(dirt,600,150,this);
 		g.drawImage(dirt,300,400,this);
 	}
 
-	private void drawRock(Graphics g)
+	public void drawRock(Graphics g)
 	{
 		g.drawImage(dirt,0,0,this);
 		g.drawImage(dirt,600,150,this);
 		g.drawImage(dirt,300,400,this);
 	}
 
-	private void drawBedrock(Graphics g)
+	public void drawBedrock(Graphics g)
 	{
 		g.drawImage(dirt,0,0,this);
 		g.drawImage(dirt,600,150,this);
