@@ -69,30 +69,44 @@ public class terraingen extends java.applet.Applet
 
 	public void drawSky(Graphics g)
 	{
-		g.drawImage(dirt,0,0,this);
-		g.drawImage(dirt,600,150,this);
-		g.drawImage(dirt,300,400,this);
+		Expo.setBackground(g,Expo.lightBlue);
 	}
 
 	public void drawGround(Graphics g)
 	{
-		g.drawImage(dirt,0,0,this);
-		g.drawImage(dirt,600,150,this);
-		g.drawImage(dirt,300,400,this);
+		int x = 0;
+		int y = 150;
+		for(int k=0; k<100;k++)
+		{
+			g.drawImage(topdirt,x,y,this);
+			x += 16;
+		}
 	}
 
 	public void drawRock(Graphics g)
 	{
 		g.drawImage(dirt,0,0,this);
-		g.drawImage(dirt,600,150,this);
-		g.drawImage(dirt,300,400,this);
 	}
 
 	public void drawBedrock(Graphics g)
 	{
-		g.drawImage(dirt,0,0,this);
-		g.drawImage(dirt,600,150,this);
-		g.drawImage(dirt,300,400,this);
+		// ROW 25
+		int x = 0;
+		int y = 600;
+		for (int k=0; k <100;k++)
+		{
+			g.drawImage(bedrock,x,y,this);
+			x += 16;
+		}
+		// ROW 26
+		x = 0;
+		y = 625;
+		for (int k=0; k <100;k++)
+		{
+			g.drawImage(bedrock,x,y,this);
+			x += 16;
+		}
+
 	}
 }
 
