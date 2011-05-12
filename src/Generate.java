@@ -251,7 +251,7 @@ public class Generate
 			row12[row12RockIndex] = 2;
 		}
 
-		// Set 25% Iron (2)
+		// Set 25% Iron (4)
 		Random row12Iron = new Random();
 		for(int k=0;k<=10;k++)
 		{
@@ -268,7 +268,7 @@ public class Generate
 			row13[row13RockIndex] = 2;
 		}
 
-		// Set 25% Iron (2)
+		// Set 25% Iron (4)
 		Random row13Iron = new Random();
 		for(int k=0;k<=10;k++)
 		{

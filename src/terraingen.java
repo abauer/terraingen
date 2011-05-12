@@ -156,6 +156,170 @@ public class terraingen extends java.applet.Applet
 			}
 			x += 25;
 		}
+		// ROW 11
+		x = 0;
+		y = 300;
+		for(int k=0; k< Generate.row11.length;k++)
+		{
+			if(Generate.row11[k] == 2)
+			{
+				g.drawImage(rock,x,y,this);
+			}
+
+			if(Generate.row11[k] == 4)
+			{
+				g.drawImage(iron,x,y,this);
+			}
+			x += 25;
+		}
+		// ROW 12
+		x = 0;
+		y = 325;
+		for(int k=0; k< Generate.row12.length;k++)
+		{
+			if(Generate.row12[k] == 2)
+			{
+				g.drawImage(rock,x,y,this);
+			}
+
+			if(Generate.row12[k] == 4)
+			{
+				g.drawImage(iron,x,y,this);
+			}
+			x += 25;
+		}
+		// ROW 13
+		x = 0;
+		y = 350;
+		for(int k=0; k< Generate.row13.length;k++)
+		{
+			if(Generate.row13[k] == 2)
+			{
+				g.drawImage(rock,x,y,this);
+			}
+
+			if(Generate.row13[k] == 4)
+			{
+				g.drawImage(iron,x,y,this);
+			}
+			x += 25;
+		}
+		// ROW 14
+		x = 0;
+		y = 375;
+		for(int k=0; k< Generate.row14.length;k++)
+		{
+			if(Generate.row14[k] == 2)
+			{
+				g.drawImage(rock,x,y,this);
+			}
+
+			if(Generate.row14[k] == 4)
+			{
+				g.drawImage(iron,x,y,this);
+			}
+			x += 25;
+		}
+		// ROW 15
+		x = 0;
+		y = 400;
+		for(int k=0; k< Generate.row15.length;k++)
+		{
+			if(Generate.row15[k] == 2)
+			{
+				g.drawImage(rock,x,y,this);
+			}
+
+			if(Generate.row15[k] == 3)
+			{
+				g.drawImage(diamond,x,y,this);
+			}
+			if(Generate.row15[k] == 5)
+			{
+				g.drawImage(redstone,x,y,this);
+			}
+			x += 25;
+		}
+		// ROW 16
+		x = 0;
+		y = 425;
+		for(int k=0; k< Generate.row16.length;k++)
+		{
+			if(Generate.row16[k] == 2)
+			{
+				g.drawImage(rock,x,y,this);
+			}
+
+			if(Generate.row16[k] == 3)
+			{
+				g.drawImage(diamond,x,y,this);
+			}
+			if(Generate.row16[k] == 5)
+			{
+				g.drawImage(redstone,x,y,this);
+			}
+			x += 25;
+		}
+		// ROW 17
+		x = 0;
+		y = 450;
+		for(int k=0; k< Generate.row17.length;k++)
+		{
+			if(Generate.row17[k] == 2)
+			{
+				g.drawImage(rock,x,y,this);
+			}
+
+			if(Generate.row17[k] == 3)
+			{
+				g.drawImage(diamond,x,y,this);
+			}
+			if(Generate.row17[k] == 5)
+			{
+				g.drawImage(redstone,x,y,this);
+			}
+			x += 25;
+		}
+		// ROW 18
+		x = 0;
+		y = 475;
+		for(int k=0; k< Generate.row18.length;k++)
+		{
+			if(Generate.row18[k] == 2)
+			{
+				g.drawImage(rock,x,y,this);
+			}
+
+			if(Generate.row18[k] == 3)
+			{
+				g.drawImage(diamond,x,y,this);
+			}
+			if(Generate.row18[k] == 5)
+			{
+				g.drawImage(redstone,x,y,this);
+			}
+			x += 25;
+		}
+		// ROW 19
+		x = 0;
+		y = 500;
+		for(int k=0; k< Generate.row19.length;k++)
+		{
+			if(Generate.row19[k] == 2)
+			{
+				g.drawImage(rock,x,y,this);
+			}
+
+			if(Generate.row19[k] == 3)
+			{
+				g.drawImage(diamond,x,y,this);
+			}
+			if(Generate.row19[k] == 5)
+			{
+				g.drawImage(redstone,x,y,this);
+			}
+			x += 25;
+		}
 	}
 
 	public void drawBedrock(Graphics g)
