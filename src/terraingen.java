@@ -49,7 +49,7 @@ public class terraingen extends java.applet.Applet
 			{
 				g.drawString("Debug: Waiting for mouse click.",20,20);
 				drawMain(g);
-			//	drawDirections(g);
+				drawDirections(g);
 				drawCredits(g);
 			}
 			else
@@ -437,9 +437,14 @@ public class terraingen extends java.applet.Applet
 		g.drawString("mojang.com - minecraft.net",775,645);
 	}
 
-	public void drawDirections()
+	public void drawDirections(Graphics g)
 	{
-		// Directions will be drawn using this method
+		Expo.setFont(g,"Arial",Font.BOLD,16);
+		g.drawString("How to Use",600,350);
+		Expo.setFont(g,"Arial",Font.PLAIN,12);
+		g.drawString("1) Click the screen to begin",600,375);
+		g.drawString("2) Answer prompts",600,400);
+		g.drawString("3) Reset program to regenerate",600,425);
 	}
 
 	public void drawDone()
