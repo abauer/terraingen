@@ -23,6 +23,7 @@ import java.util.Random;
 public class Generate
 {
 	public static int seed = 0;
+	public static boolean wantSeed = false;
 	public static int row0[] = new int[40];
 	public static int row1[] = new int[40];
 	public static int row2[] = new int[40];
@@ -53,13 +54,21 @@ public class Generate
 
 	public static void getSeed()
 	{
-		seed = Expo.enterIntGUI("Enter Seed (Leave blank for random seed)");
-		Generate.makeSeeds();
+		wantSeed = Expo.enterBooleanGUI("[true/false] Use seed?");
+		if(wantSeed)
+		{
+			seed = Expo.enterIntGUI("Enter Seed");
+			Generate.makeSeeds();
+		}
+		else
+		{
+			terraingen.numClicks = 2;
+		}
 	}
 
 	private static void makeSeeds()
 	{
-		// Makes seeds from seeds
+		// Makes seeds from seeds for usage later...
 		// See documentation for an explanation
 
 		Random random1 = new Random(seed);

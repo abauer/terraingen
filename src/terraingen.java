@@ -15,7 +15,7 @@ import java.util.Arrays;
 public class terraingen extends java.applet.Applet
 {
 	Image dirt,topdirt,rock,diamond,iron,redstone,bedrock,coal,snowdirt;
-	int numClicks;
+	public static int numClicks;
 
 	public void init()
 	{
