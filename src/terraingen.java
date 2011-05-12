@@ -28,12 +28,12 @@ public class terraingen extends java.applet.Applet
 		{
 			g.drawString("Debug: Prompting for seed...",20,20);
 			numClicks++;
-			repaint();
 			Generate.getSeed();
 			if (Generate.seed == 0)
 			{
 				numClicks = 1;
 			}
+			repaint();
 		}
 		else
 		{
@@ -52,7 +52,6 @@ public class terraingen extends java.applet.Applet
 				drawGround(g);
 				drawRock(g);
 				drawBedrock(g);
-				Expo.delay(3000); // wait 3 seconds
 				Menu.drawDone();
 			}
 		}
