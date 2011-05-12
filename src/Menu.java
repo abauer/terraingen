@@ -13,7 +13,8 @@ public class Menu
 
 	public static void drawDone()
 	{
-		Expo.displayGUI("Generation complete!");
+		// Expo.displayGUI("Generation complete!");
+		// Removed 5/12/11 because it was annoying...
 	}
 
 }
