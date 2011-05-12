@@ -62,7 +62,9 @@ public class Generate
 		}
 		else
 		{
-			terraingen.numClicks = 2;
+			System.out.println(terraingen.numClicks);
+			terraingen.numClicks = 3;
+			System.out.println(terraingen.numClicks);
 		}
 	}
 

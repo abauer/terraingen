@@ -37,10 +37,10 @@ public class terraingen extends java.applet.Applet
 			g.drawString("Debug: Prompting for seed...",20,20);
 			numClicks++;
 			Generate.getSeed();
-			if (Generate.seed == 0)
-			{
-				numClicks = 1;
-			}
+		//	if (Generate.seed == 0)
+		//	{
+		//		numClicks = 1;
+		//	}
 			repaint();
 		}
 		else
