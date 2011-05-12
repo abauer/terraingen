@@ -23,7 +23,7 @@ import java.util.Random;
 public class Generate
 {
 	public static int seed = 0;
-	public static boolean wantSeed = false;
+	public static String wantSeed = "null";
 	public static int row0[] = new int[40];
 	public static int row1[] = new int[40];
 	public static int row2[] = new int[40];
@@ -54,15 +54,24 @@ public class Generate
 
 	public static void getSeed()
 	{
-		wantSeed = Expo.enterBooleanGUI("[true/false] Use seed?");
-		if(wantSeed)
+		wantSeed = Expo.enterStringGUI("[true/false] Use seed?");
+		if(wantSeed.equals("null"))
 		{
 			seed = Expo.enterIntGUI("Enter Seed");
 			Generate.makeSeeds();
 		}
 		else
 		{
-			terraingen.numClicks = 3;
+			if(wantSeed.equals("true"))
+			{
+				seed = Expo.enterIntGUI("Enter Seed");
+				Generate.makeSeeds();
+			}
+			if(wantSeed.equals("false"))
+			{
+				// do nothing
+			}
+		//	terraingen.numClicks = 3;
 		}
 	}
 
