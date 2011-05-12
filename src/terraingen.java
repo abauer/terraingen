@@ -87,6 +87,11 @@ public class terraingen extends java.applet.Applet
 			{
 				g.drawImage(topdirt,x,y,this);
 			}
+
+			if(Generate.row5[k] == 9)
+			{
+				g.drawImage(snowdirt,x,y,this);
+			}
 			x += 25;
 		}
 		// ROW 6

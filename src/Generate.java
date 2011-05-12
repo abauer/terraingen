@@ -186,6 +186,15 @@ public class Generate
 	public static void assignRandom()
 	{
 		/////////////////////
+		//////Top Layer//////
+		/////////////////////
+		int randTotal = rand1+rand2+rand3+rand5-rand4;
+		if(randTotal > rand1+rand4+rand3)
+		{
+			Arrays.fill(row5,9);
+		}
+
+		/////////////////////
 		//Intermediate Zone//
 		/////////////////////
 
