@@ -320,6 +320,46 @@ public class terraingen extends java.applet.Applet
 			}
 			x += 25;
 		}
+		// ROW 20
+		x = 0;
+		y = 525;
+		for(int k=0; k< Generate.row20.length;k++)
+		{
+			if(Generate.row20[k] == 2)
+			{
+				g.drawImage(rock,x,y,this);
+			}
+
+			if(Generate.row20[k] == 3)
+			{
+				g.drawImage(diamond,x,y,this);
+			}
+			if(Generate.row20[k] == 5)
+			{
+				g.drawImage(redstone,x,y,this);
+			}
+			x += 25;
+		}
+		// ROW 21
+		x = 0;
+		y = 550;
+		for(int k=0; k< Generate.row21.length;k++)
+		{
+			if(Generate.row21[k] == 2)
+			{
+				g.drawImage(rock,x,y,this);
+			}
+
+			if(Generate.row21[k] == 3)
+			{
+				g.drawImage(diamond,x,y,this);
+			}
+			if(Generate.row21[k] == 5)
+			{
+				g.drawImage(redstone,x,y,this);
+			}
+			x += 25;
+		}
 	}
 
 	public void drawBedrock(Graphics g)
