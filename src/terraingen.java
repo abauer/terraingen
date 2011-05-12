@@ -9,7 +9,7 @@ import java.util.Arrays;
 
 public class terraingen extends java.applet.Applet
 {
-	Image dirt,topdirt,rock,diamond,iron,redstone,bedrock;
+	Image dirt,topdirt,rock,diamond,iron,redstone,bedrock,coal,snowdirt;
 	int numClicks;
 
 	public void init()
@@ -21,6 +21,8 @@ public class terraingen extends java.applet.Applet
 		iron = getImage(getDocumentBase(),"iron.png");
 		redstone = getImage(getDocumentBase(),"redstone.png");
 		bedrock = getImage(getDocumentBase(),"bedrock.png");
+		coal = getImage(getDocumentBase(),"coal.png");
+		snowdirt = getImage(getDocumentBase(),"snowdirt.png");
 	}
 
 	public void paint(Graphics g)
@@ -166,9 +168,9 @@ public class terraingen extends java.applet.Applet
 				g.drawImage(rock,x,y,this);
 			}
 
-			if(Generate.row11[k] == 4)
+			if(Generate.row11[k] == 8)
 			{
-				g.drawImage(iron,x,y,this);
+				g.drawImage(coal,x,y,this);
 			}
 			x += 25;
 		}
@@ -182,9 +184,9 @@ public class terraingen extends java.applet.Applet
 				g.drawImage(rock,x,y,this);
 			}
 
-			if(Generate.row12[k] == 4)
+			if(Generate.row12[k] == 8)
 			{
-				g.drawImage(iron,x,y,this);
+				g.drawImage(coal,x,y,this);
 			}
 			x += 25;
 		}
@@ -198,9 +200,9 @@ public class terraingen extends java.applet.Applet
 				g.drawImage(rock,x,y,this);
 			}
 
-			if(Generate.row13[k] == 4)
+			if(Generate.row13[k] == 8)
 			{
-				g.drawImage(iron,x,y,this);
+				g.drawImage(coal,x,y,this);
 			}
 			x += 25;
 		}
@@ -214,9 +216,9 @@ public class terraingen extends java.applet.Applet
 				g.drawImage(rock,x,y,this);
 			}
 
-			if(Generate.row14[k] == 4)
+			if(Generate.row14[k] == 8)
 			{
-				g.drawImage(iron,x,y,this);
+				g.drawImage(coal,x,y,this);
 			}
 			x += 25;
 		}
@@ -355,6 +357,26 @@ public class terraingen extends java.applet.Applet
 				g.drawImage(diamond,x,y,this);
 			}
 			if(Generate.row21[k] == 5)
+			{
+				g.drawImage(redstone,x,y,this);
+			}
+			x += 25;
+		}
+		// ROW 22
+		x = 0;
+		y = 575;
+		for(int k=0; k< Generate.row22.length;k++)
+		{
+			if(Generate.row22[k] == 2)
+			{
+				g.drawImage(rock,x,y,this);
+			}
+
+			if(Generate.row22[k] == 3)
+			{
+				g.drawImage(diamond,x,y,this);
+			}
+			if(Generate.row22[k] == 5)
 			{
 				g.drawImage(redstone,x,y,this);
 			}
