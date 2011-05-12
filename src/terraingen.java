@@ -3,6 +3,11 @@
 //          TerrainGen 1.0            //
 //                                    //
 ////////////////////////////////////////
+//                                    //
+//           See /doc for             //
+//        full documentation          //
+//                                    //
+////////////////////////////////////////
 
 import java.awt.*;
 import java.util.Arrays;
@@ -43,8 +48,9 @@ public class terraingen extends java.applet.Applet
 			if (numClicks < 1)
 			{
 				g.drawString("Debug: Waiting for mouse click.",20,20);
-			//	Menu.drawMain(g);
-			//	Menu.drawDirections(g);
+				drawMain(g);
+			//	drawDirections(g);
+				drawCredits(g);
 			}
 			else
 			{
@@ -55,7 +61,7 @@ public class terraingen extends java.applet.Applet
 				drawGround(g);
 				drawRock(g);
 				drawBedrock(g);
-				Menu.drawDone();
+				drawDone(); // deprecated
 			}
 		}
 
@@ -414,6 +420,32 @@ public class terraingen extends java.applet.Applet
 			x += 25;
 		}
 
+	}
+
+	public void drawMain(Graphics g)
+	{
+		Expo.setFont(g,"Arial",Font.BOLD,36);
+		Expo.drawString(g,"TerrainGen",100,200);
+		Expo.setFont(g,"Arial",Font.PLAIN,12);
+		g.drawString("v. 1.0",300,200);
+	}
+
+	public void drawCredits(Graphics g)
+	{
+		Expo.setFont(g,"Arial",Font.PLAIN,12);
+		g.drawString("Inspired by Minecraft - (c) Mojang AB",775,630);
+		g.drawString("mojang.com - minecraft.net",775,645);
+	}
+
+	public void drawDirections()
+	{
+		// Directions will be drawn using this method
+	}
+
+	public void drawDone()
+	{
+		// Expo.displayGUI("Generation complete!");
+		// Removed 5/12/11 because it was annoying...
 	}
 }
 

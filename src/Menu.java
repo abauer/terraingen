@@ -1,17 +1,20 @@
+import java.awt.*;
+
 public class Menu
 {
-
-	public static void drawMain()
+	public void drawMain(Graphics g)
 	{
 		// Title and the such will be drawn using this method
+		Expo.setFont(g,"Arial",Font.BOLD,36);
+		Expo.drawString(g,"Hello There!",100,200);
 	}
 
-	public static void drawDirections()
+	public void drawDirections()
 	{
 		// Directions will be drawn using this method
 	}
 
-	public static void drawDone()
+	public void drawDone()
 	{
 		// Expo.displayGUI("Generation complete!");
 		// Removed 5/12/11 because it was annoying...
