@@ -5,6 +5,7 @@
 ////////////////////////////////////////
 
 import java.awt.*;
+import java.util.Arrays;
 
 public class terraingen extends java.applet.Applet
 {
@@ -75,36 +76,79 @@ public class terraingen extends java.applet.Applet
 
 	public void drawGround(Graphics g)
 	{
+		// ROW 5
 		int x = 0;
 		int y = 150;
-		for(int k=0; k<100;k++)
+		for(int k=0; k < Generate.row5.length;k++)
 		{
-			g.drawImage(topdirt,x,y,this);
+			if(Generate.row5[k] == 7)
+			{
+				g.drawImage(topdirt,x,y,this);
+			}
+			x += 25;
+		}
+		// ROW 6
+		x = 0;
+		y = 175;
+		for(int k=0; k < Generate.row6.length;k++)
+		{
+			if(Generate.row6[k] == 1)
+			{
+				g.drawImage(dirt,x,y,this);
+			}
+			x += 25;
+		}
+		// ROW 7
+		x = 0;
+		y = 200;
+		for(int k=0; k < Generate.row7.length;k++)
+		{
+			if(Generate.row7[k] == 1)
+			{
+				g.drawImage(dirt,x,y,this);
+			}
+			x += 25;
+		}
+		// ROW 8
+		x = 0;
+		y = 225;
+		for(int k=0; k< Generate.row8.length;k++)
+		{
+			if(Generate.row8[k] == 1)
+			{
+				g.drawImage(dirt,x,y,this);
+			}
 			x += 25;
 		}
 	}
 
 	public void drawRock(Graphics g)
 	{
-		g.drawImage(dirt,0,0,this);
+
 	}
 
 	public void drawBedrock(Graphics g)
 	{
-		// ROW 25
+		// ROW 24
 		int x = 0;
 		int y = 600;
-		for (int k=0; k <100;k++)
+		for (int k=0; k < Generate.row24.length;k++)
 		{
-			g.drawImage(bedrock,x,y,this);
+			if(Generate.row24[k] == 6)
+			{
+				g.drawImage(bedrock,x,y,this);
+			}
 			x += 25;
 		}
-		// ROW 26
+		// ROW 25
 		x = 0;
 		y = 625;
-		for (int k=0; k <100;k++)
+		for (int k=0; k <Generate.row25.length;k++)
 		{
-			g.drawImage(bedrock,x,y,this);
+			if(Generate.row25[k] == 6)
+			{
+				g.drawImage(bedrock,x,y,this);
+			}
 			x += 25;
 		}
 
