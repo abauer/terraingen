@@ -124,7 +124,38 @@ public class terraingen extends java.applet.Applet
 
 	public void drawRock(Graphics g)
 	{
+		// ROW 9
+		int x = 0;
+		int y = 250;
+		for(int k=0; k< Generate.row9.length;k++)
+		{
+			if(Generate.row9[k] == 1)
+			{
+				g.drawImage(dirt,x,y,this);
+			}
 
+			if(Generate.row9[k] == 2)
+			{
+				g.drawImage(rock,x,y,this);
+			}
+			x += 25;
+		}
+		// ROW 10
+		x = 0;
+		y = 275;
+		for(int k=0; k< Generate.row10.length;k++)
+		{
+			if(Generate.row10[k] == 1)
+			{
+				g.drawImage(dirt,x,y,this);
+			}
+
+			if(Generate.row10[k] == 2)
+			{
+				g.drawImage(rock,x,y,this);
+			}
+			x += 25;
+		}
 	}
 
 	public void drawBedrock(Graphics g)
