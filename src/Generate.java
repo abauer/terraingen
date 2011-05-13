@@ -71,7 +71,7 @@ public class Generate
 			{
 				// do nothing
 			}
-		//	terraingen.numClicks = 3;
+			terraingen.numClicks = 3;
 		}
 	}
 
