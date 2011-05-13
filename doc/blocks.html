@@ -1,5 +1,6 @@
 <head>
 <title>TerrainGen Documentation</title>
+<link rel="stylesheet" type="text/css" href="style.css" />
 </head>
 <body>
 <center><b>TerrainGen Documentation > Blocks</b><br>
@@ -23,7 +24,40 @@ TerrainGen utlizes a block ID system. An array is created for each row. Each arr
 
 <h3>Modular structure</h3>
 TerrainGen allows for more block IDs to be added with minimal changes to the source code. For example, dirt:
+<br><br>
+Set certain rows to be all dirt. <i>(not applicable to all blocks)</i>
+<div class="box">
+<pre>
+// First four land rows with "dirt"
+Arrays.fill(row5,7);
+Arrays.fill(row6,1);
+Arrays.fill(row7,1);
+Arrays.fill(row8,1);
+</pre>
+</div>
 <br>
+<br>
+For row 9, 50% of blocks are dirt and 50% of blocks are rock. Percentages are based on the number of blocks assigned. In this case, 20 indexes are assigned for each block type.
+<div class="box">
+<pre>
+//////////////////////////////////////////////////////////////////////// row9
+// Set 50% dirt (1)
+Random row9Dirt = new Random();
+	for(int k=0;k<=20;k++)
+	{
+		int row9DirtIndex = row9Dirt.nextInt(39);
+		row9[row9DirtIndex] = 1;
+	}
+
+// Set 50% rock (2)
+Random row9Rock = new Random();
+	for(int k=0;k<=20;k++)
+	{
+        int row9RockIndex = row9Rock.nextInt(39);
+		row9[row9RockIndex] = 2;
+	}
+</pre>
+</div>
 <!-- STUFF ENDS HERE -->
 <center><small>Optimized for <a href="http://www.google.com/chrome">Google Chrome</a></small></center>
 </body>
