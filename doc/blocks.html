@@ -4,8 +4,8 @@
 </head>
 <body>
 <center><b>TerrainGen Documentation > Blocks</b><br>
-<small>(revised 5/12/11)</small><br><br>
-<a href="index.html">Index</a> | <a href="Generation.html">Generation</a> | <b>Blocks</b> | <a href="Expo.html">Expo</a><br><br></center>
+<small>(revised 5/13/11)</small><br><br>
+<a href="index.html">Index</a> | <a href="Generation.html">Generation</a> | <b>Blocks</b> | <a href="Expo.html">Expo</a><hr></center>
 <!-- STUFF START HERE -->
 <h3>Block IDs</h3>
 <ul>
@@ -25,7 +25,7 @@ TerrainGen utlizes a block ID system. An array is created for each row. Each arr
 <h3>Modular structure</h3>
 TerrainGen allows for more block IDs to be added with minimal changes to the source code. For example, dirt:
 <br><br>
-Set certain rows to be all dirt. <i>(not applicable to all blocks)</i>
+Set certain rows to be all dirt. <i>(not applicable to all blocks/rows)</i>
 <div class="box">
 <pre>
 // First four land rows with "dirt"
@@ -38,6 +38,8 @@ Arrays.fill(row8,1);
 <br>
 <br>
 For row 9, 50% of blocks are dirt and 50% of blocks are rock. Percentages are based on the number of blocks assigned. In this case, 20 indexes are assigned for each block type.
+<br>
+<ul><b>NOTE:</b> The number of indexes to assign is a general rule of thumb and may need to be tweaked as desired.</ul>
 <div class="box">
 <pre>
 //////////////////////////////////////////////////////////////////////// row9
@@ -58,6 +60,93 @@ Random row9Rock = new Random();
 	}
 </pre>
 </div>
+<br>
+When the Block IDs are read from the arrays, an image will be drawn based on the actual ID. The variable <b>y</b> determines the row's location on the screen.
+<br>
+<div class="box">
+<pre>
+// ROW 9
+int x = 0;
+int y = 250;
+for(int k=0; k< Generate.row9.length;k++)
+{
+	if(Generate.row9[k] == 1)
+    {
+		g.drawImage(dirt,x,y,this);
+	}
+
+	if(Generate.row9[k] == 2)
+	{
+		g.drawImage(rock,x,y,this);
+	}
+    
+    x += 25;
+}
+</pre>
+</div>
+<br><br>
+Adding new blocks is very simple. Using the same code snipplets, a new block "gold" (ID 10) is created and used on row 9.
+<ul><b>NOTE:</b> Not all changes are shown. Images and variables may need to be added. These are minor changes and are not documented.</ul>
+Assigning values to each index of the array...
+<br>
+<div class="box">
+<pre>
+//////////////////////////////////////////////////////////////////////// row9
+// Set 50% dirt (1)
+Random row9Dirt = new Random();
+	for(int k=0;k<=20;k++)
+	{
+		int row9DirtIndex = row9Dirt.nextInt(39);
+		row9[row9DirtIndex] = 1;
+	}
+
+// Set 25% rock (2)
+Random row9Rock = new Random();
+	for(int k=0;k<=20;k++)
+	{
+        int row9RockIndex = row9Rock.nextInt(39);
+		row9[row9RockIndex] = 2;
+	}
+// Set 25% gold (10)
+Random row9Gold = new Random();
+	for(int k=0;k<=20;k++)
+	{
+        int row9GoldIndex = row9Gold.nextInt(39);
+		row9[row9GoldIndex] = 10;
+	}
+</pre>
+</div>
+<br>
+Reading the indexes of the array...
+<br>
+<div class="box">
+<pre>
+// ROW 9
+int x = 0;
+int y = 250;
+for(int k=0; k< Generate.row9.length;k++)
+{
+	if(Generate.row9[k] == 1)
+    {
+		g.drawImage(dirt,x,y,this);
+	}
+
+	if(Generate.row9[k] == 2)
+	{
+		g.drawImage(rock,x,y,this);
+	}
+    
+    if(Generate.row9[k] == 10)
+    {
+        g.drawImage(gold,x,y,this);
+    }
+    
+    x += 25;
+}
+</pre>
+</div>
+<h3>Further reading</h3>
+<li><a href="generation.html">Generation</a> - how often and how blocks are randomly assigned
 <!-- STUFF ENDS HERE -->
-<center><small>Optimized for <a href="http://www.google.com/chrome">Google Chrome</a></small></center>
+<center><small>Optimized for <a href="http://www.google.com/chrome">Google Chrome</a> | TerrainGen 1.0</small></center>
 </body>
