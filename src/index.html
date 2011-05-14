@@ -1,12 +1,20 @@
 <head>
 <title>TerrainGen 1.0</title>
+<link rel="stylesheet" type="text/css" href="style.css" />
 </head>
-<body>
+<!-- START KNOWN BUGS ALERT -->
+<div id="alert" class="alert"><small><b>Known bugs:</b> <a href="#" onclick="toggleview('alert')">[Hide]</a>
+<li>Browser saves state of program (relaunch browser to fix)</li></small></div><br>
+<!-- END KNOWN BUGS ALERT -->
 <center>
+
+<!-- START APPLET -->
 <applet code="terraingen.class" width=1000 height=650></APPLET>
+<!-- END APPLET -->
+
+<!-- START APPLET INFORMATION -->
 <hr>
 <b>TerrainGen 1.0</b> | TexasGamer<br>
-
 <a href="../doc/index.html">Documentation</a> | <a href="index.html">Reload</a>
 <hr>
 <small>Open source under TexasGamer software license.</small> 
@@ -14,4 +22,21 @@
 <a href="https://github.com/TexasGamer/terraingen"class="gitforked-button gitforked-forks">Fork</a>
 </center>
 </body>
+<!-- END APPLET INFORMATION -->
+<!-- START SCRIPTS -->
 <script src="http://gitforked.com/api/1.1/button.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+function toggleview(element1) {
+
+   element1 = document.getElementById(element1);
+
+   if (element1.style.display == 'block' || element1.style.display == '')
+      element1.style.display = 'none';
+   else
+      element1.style.display = 'block';
+
+   return;
+}
+</script>
+<!-- END SCRIPTS -->
