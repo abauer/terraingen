@@ -265,7 +265,7 @@ public class Generate
 
 		// Set 25% Coal (8)
 		Random row11Iron = new Random();
-		for(int k=0;k<=10;k++)
+		for(int k=0;k<=6;k++)
 		{
 			int row11IronIndex = row11Iron.nextInt(39);
 			row11[row11IronIndex] = 8;
@@ -282,7 +282,7 @@ public class Generate
 
 		// Set 25% Coal (8)
 		Random row12Iron = new Random();
-		for(int k=0;k<=10;k++)
+		for(int k=0;k<=6;k++)
 		{
 			int row12IronIndex = row12Iron.nextInt(39);
 			row12[row12IronIndex] = 8;
@@ -299,7 +299,7 @@ public class Generate
 
 		// Set 25% Coal (8)
 		Random row13Iron = new Random();
-		for(int k=0;k<=10;k++)
+		for(int k=0;k<=6;k++)
 		{
 			int row13IronIndex = row13Iron.nextInt(39);
 			row13[row13IronIndex] = 8;
@@ -316,7 +316,7 @@ public class Generate
 
 		// Set 25% Coal (8)
 		Random row14Iron = new Random();
-		for(int k=0;k<=10;k++)
+		for(int k=0;k<=6;k++)
 		{
 			int row14IronIndex = row14Iron.nextInt(39);
 			row14[row14IronIndex] = 8;
@@ -335,20 +335,20 @@ public class Generate
 			row15[row15RockIndex] = 2;
 		}
 
-		// Set 25% Diamond (3)
+		// Set 25% Iron (4)
 		Random row15Diamond = new Random();
-		for(int k=0;k<=10;k++)
+		for(int k=0;k<=2;k++)
 		{
 			int row15DiamondIndex = row15Diamond.nextInt(39);
-			row15[row15DiamondIndex] = 3;
+			row15[row15DiamondIndex] = 4;
 		}
 
-		// Set 25% Redstone (5)
+		// Set 25% Coal (8)
 		Random row15Redstone = new Random();
-		for(int k=0;k<=10;k++)
+		for(int k=0;k<=3;k++)
 		{
 			int row15RedstoneIndex = row15Redstone.nextInt(39);
-			row15[row15RedstoneIndex] = 5;
+			row15[row15RedstoneIndex] = 8;
 		}
 
 		//////////////////////////////////////////////////////////////////////// row16
@@ -360,20 +360,20 @@ public class Generate
 			row16[row16RockIndex] = 2;
 		}
 
-		// Set 25% Diamond (3)
+		// Set 25% Iron (4)
 		Random row16Diamond = new Random();
-		for(int k=0;k<=10;k++)
+		for(int k=0;k<=2;k++)
 		{
 			int row16DiamondIndex = row16Diamond.nextInt(39);
-			row16[row16DiamondIndex] = 3;
+			row16[row16DiamondIndex] = 4;
 		}
 
-		// Set 25% Redstone (5)
+		// Set 25% Coal (8)
 		Random row16Redstone = new Random();
-		for(int k=0;k<=10;k++)
+		for(int k=0;k<=3;k++)
 		{
 			int row16RedstoneIndex = row16Redstone.nextInt(39);
-			row16[row16RedstoneIndex] = 5;
+			row16[row16RedstoneIndex] = 8;
 		}
 
 		//////////////////////////////////////////////////////////////////////// row17
@@ -385,20 +385,20 @@ public class Generate
 			row17[row17RockIndex] = 2;
 		}
 
-		// Set 25% Diamond (3)
+		// Set 25% Iron (4)
 		Random row17Diamond = new Random();
-		for(int k=0;k<=10;k++)
+		for(int k=0;k<=2;k++)
 		{
 			int row17DiamondIndex = row17Diamond.nextInt(39);
-			row17[row17DiamondIndex] = 3;
+			row17[row17DiamondIndex] = 4;
 		}
 
-		// Set 25% Redstone (5)
+		// Set 25% Coal (8)
 		Random row17Redstone = new Random();
-		for(int k=0;k<=10;k++)
+		for(int k=0;k<=3;k++)
 		{
 			int row17RedstoneIndex = row17Redstone.nextInt(39);
-			row17[row17RedstoneIndex] = 5;
+			row17[row17RedstoneIndex] = 8;
 		}
 
 		//////////////////////////////////////////////////////////////////////// row18
@@ -410,20 +410,20 @@ public class Generate
 			row18[row18RockIndex] = 2;
 		}
 
-		// Set 25% Diamond (3)
+		// Set 25% Iron (4)
 		Random row18Diamond = new Random();
-		for(int k=0;k<=10;k++)
+		for(int k=0;k<=2;k++)
 		{
 			int row18DiamondIndex = row18Diamond.nextInt(39);
-			row18[row18DiamondIndex] = 3;
+			row18[row18DiamondIndex] = 4;
 		}
 
-		// Set 25% Redstone (5)
+		// Set 25% Coal (8)
 		Random row18Redstone = new Random();
-		for(int k=0;k<=10;k++)
+		for(int k=0;k<=3;k++)
 		{
 			int row18RedstoneIndex = row18Redstone.nextInt(39);
-			row18[row18RedstoneIndex] = 5;
+			row18[row18RedstoneIndex] = 8;
 		}
 
 		/////////////////////
@@ -441,7 +441,7 @@ public class Generate
 
 		// Set 25% Diamond (3)
 		Random row19Diamond = new Random();
-		for(int k=0;k<=10;k++)
+		for(int k=0;k<=2;k++)
 		{
 			int row19DiamondIndex = row19Diamond.nextInt(39);
 			row19[row19DiamondIndex] = 3;
@@ -449,7 +449,7 @@ public class Generate
 
 		// Set 25% Redstone (5)
 		Random row19Redstone = new Random();
-		for(int k=0;k<=10;k++)
+		for(int k=0;k<=3;k++)
 		{
 			int row19RedstoneIndex = row19Redstone.nextInt(39);
 			row19[row19RedstoneIndex] = 5;
@@ -466,7 +466,7 @@ public class Generate
 
 		// Set 25% Diamond (3)
 		Random row20Diamond = new Random();
-		for(int k=0;k<=10;k++)
+		for(int k=0;k<=2;k++)
 		{
 			int row20DiamondIndex = row20Diamond.nextInt(39);
 			row20[row20DiamondIndex] = 3;
@@ -474,7 +474,7 @@ public class Generate
 
 		// Set 25% Redstone (5)
 		Random row20Redstone = new Random();
-		for(int k=0;k<=10;k++)
+		for(int k=0;k<=3;k++)
 		{
 			int row20RedstoneIndex = row20Redstone.nextInt(39);
 			row20[row20RedstoneIndex] = 5;
@@ -491,7 +491,7 @@ public class Generate
 
 		// Set 25% Diamond (3)
 		Random row21Diamond = new Random();
-		for(int k=0;k<=10;k++)
+		for(int k=0;k<=2;k++)
 		{
 			int row21DiamondIndex = row21Diamond.nextInt(39);
 			row21[row21DiamondIndex] = 3;
@@ -499,7 +499,7 @@ public class Generate
 
 		// Set 25% Redstone (5)
 		Random row21Redstone = new Random();
-		for(int k=0;k<=10;k++)
+		for(int k=0;k<=3;k++)
 		{
 			int row21RedstoneIndex = row21Redstone.nextInt(39);
 			row21[row21RedstoneIndex] = 5;
@@ -516,7 +516,7 @@ public class Generate
 
 		// Set 25% Diamond (3)
 		Random row22Diamond = new Random();
-		for(int k=0;k<=10;k++)
+		for(int k=0;k<=2;k++)
 		{
 			int row22DiamondIndex = row22Diamond.nextInt(39);
 			row22[row22DiamondIndex] = 3;
@@ -524,7 +524,7 @@ public class Generate
 
 		// Set 25% Redstone (5)
 		Random row22Redstone = new Random();
-		for(int k=0;k<=10;k++)
+		for(int k=0;k<=3;k++)
 		{
 			int row22RedstoneIndex = row22Redstone.nextInt(39);
 			row22[row22RedstoneIndex] = 5;
@@ -541,7 +541,7 @@ public class Generate
 
 		// Set 25% Diamond (3)
 		Random row23Diamond = new Random();
-		for(int k=0;k<=10;k++)
+		for(int k=0;k<=2;k++)
 		{
 			int row23DiamondIndex = row23Diamond.nextInt(39);
 			row23[row23DiamondIndex] = 3;
@@ -549,12 +549,10 @@ public class Generate
 
 		// Set 25% Redstone (5)
 		Random row23Redstone = new Random();
-		for(int k=0;k<=10;k++)
+		for(int k=0;k<=3;k++)
 		{
 			int row23RedstoneIndex = row23Redstone.nextInt(39);
 			row23[row23RedstoneIndex] = 5;
 		}
 	}
-
-
 }

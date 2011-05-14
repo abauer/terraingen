@@ -246,13 +246,13 @@ public class terraingen extends java.applet.Applet
 				g.drawImage(rock,x,y,this);
 			}
 
-			if(Generate.row15[k] == 3)
+			if(Generate.row15[k] == 4)
 			{
-				g.drawImage(diamond,x,y,this);
+				g.drawImage(iron,x,y,this);
 			}
-			if(Generate.row15[k] == 5)
+			if(Generate.row15[k] == 8)
 			{
-				g.drawImage(redstone,x,y,this);
+				g.drawImage(coal,x,y,this);
 			}
 			x += 25;
 		}
@@ -266,13 +266,13 @@ public class terraingen extends java.applet.Applet
 				g.drawImage(rock,x,y,this);
 			}
 
-			if(Generate.row16[k] == 3)
+			if(Generate.row16[k] == 4)
 			{
-				g.drawImage(diamond,x,y,this);
+				g.drawImage(iron,x,y,this);
 			}
-			if(Generate.row16[k] == 5)
+			if(Generate.row16[k] == 8)
 			{
-				g.drawImage(redstone,x,y,this);
+				g.drawImage(coal,x,y,this);
 			}
 			x += 25;
 		}
@@ -286,13 +286,13 @@ public class terraingen extends java.applet.Applet
 				g.drawImage(rock,x,y,this);
 			}
 
-			if(Generate.row17[k] == 3)
+			if(Generate.row17[k] == 4)
 			{
-				g.drawImage(diamond,x,y,this);
+				g.drawImage(iron,x,y,this);
 			}
-			if(Generate.row17[k] == 5)
+			if(Generate.row17[k] == 8)
 			{
-				g.drawImage(redstone,x,y,this);
+				g.drawImage(coal,x,y,this);
 			}
 			x += 25;
 		}
@@ -306,13 +306,13 @@ public class terraingen extends java.applet.Applet
 				g.drawImage(rock,x,y,this);
 			}
 
-			if(Generate.row18[k] == 3)
+			if(Generate.row18[k] == 4)
 			{
-				g.drawImage(diamond,x,y,this);
+				g.drawImage(iron,x,y,this);
 			}
-			if(Generate.row18[k] == 5)
+			if(Generate.row18[k] == 8)
 			{
-				g.drawImage(redstone,x,y,this);
+				g.drawImage(coal,x,y,this);
 			}
 			x += 25;
 		}
