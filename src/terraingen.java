@@ -54,14 +54,17 @@ public class terraingen extends java.applet.Applet
 			}
 			else
 			{
-				g.drawString("Debug: Ignoring mouse click(s). Already prompted for seed.",20,20);
-				Generate.setConstants();
-				Generate.assignRandom();
-				drawSky(g);
-				drawGround(g);
-				drawRock(g);
-				drawBedrock(g);
-				drawDone(); // deprecated
+				if (numClicks == 999)
+				{
+					g.drawString("Debug: Ignoring mouse click(s). Already prompted for seed.",20,20);
+					Generate.setConstants();
+					Generate.assignRandom();
+					drawSky(g);
+					drawGround(g);
+					drawRock(g);
+					drawBedrock(g);
+					drawDone(); // deprecated
+				}
 			}
 		}
 

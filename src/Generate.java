@@ -66,12 +66,12 @@ public class Generate
 			{
 				seed = Expo.enterIntGUI("Enter Seed");
 				Generate.makeSeeds();
+				terraingen.numClicks = 999;
 			}
 			if(wantSeed.equals("false"))
 			{
-				// do nothing
+				terraingen.numClicks = 999;
 			}
-			terraingen.numClicks = 3;
 		}
 	}
 
@@ -206,7 +206,7 @@ public class Generate
 		/////////////////////
 		//////Top Layer//////
 		/////////////////////
-		int randTotal = rand1+rand2+rand3+rand5-rand4;
+		int randTotal = rand1+rand2+rand3+rand5;
 		if(randTotal > rand1+rand4+rand3)
 		{
 			Arrays.fill(row5,9);
