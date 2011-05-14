@@ -30,7 +30,7 @@ Images of each block are imported. Each image is 25px by 25px and is saved in th
 TerrainGen allows for more block IDs to be added with minimal changes to the source code. For example, dirt:
 <br><br>
 Set certain rows to be all dirt. <i>(not applicable to all blocks/rows)</i>
-<div class="box">
+<div class="code">
 <pre>
 // First four land rows with "dirt"
 Arrays.fill(row5,7);
@@ -44,7 +44,7 @@ Arrays.fill(row8,1);
 For row 9, 50% of blocks are dirt and 50% of blocks are rock. Percentages are based on the number of blocks assigned. In this case, 20 indexes are assigned for each block type.
 <br>
 <ul><b>NOTE:</b> The number of indexes to assign is a general rule of thumb and may need to be tweaked as desired.</ul>
-<div class="box">
+<div class="code">
 <pre>
 //////////////////////////////////////////////////////////////////////// row9
 // Set 50% dirt (1)
@@ -67,7 +67,7 @@ Random row9Rock = new Random();
 <br>
 When the Block IDs are read from the arrays, an image will be drawn based on the actual ID. The variable <b>y</b> determines the row's location on the screen.
 <br>
-<div class="box">
+<div class="code">
 <pre>
 // ROW 9
 int x = 0;
@@ -93,7 +93,7 @@ Adding new blocks is very simple. Using the same code snipplets, a new block "go
 <ul><b>NOTE:</b> Not all changes are shown. Images and variables may need to be added. These are minor changes and are not documented.</ul>
 Assigning values to each index of the array...
 <br>
-<div class="box">
+<div class="code">
 <pre>
 //////////////////////////////////////////////////////////////////////// row9
 // Set 50% dirt (1)
@@ -123,7 +123,7 @@ Random row9Gold = new Random();
 <br>
 Reading the indexes of the array...
 <br>
-<div class="box">
+<div class="code">
 <pre>
 // ROW 9
 int x = 0;
