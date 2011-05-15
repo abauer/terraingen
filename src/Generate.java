@@ -270,7 +270,7 @@ public class Generate
 
 			// Set 25% Iron (4)
 			Random row15Iron = new Random();
-			for(int k=0;k<=2;k++)
+			for(int k=0;k<=3;k++)
 			{
 				int row15IronIndex = row15Iron.nextInt(39);
 				row15[row15IronIndex] = 4;
@@ -278,7 +278,7 @@ public class Generate
 
 			// Set 25% Coal (8)
 			Random row15Coal = new Random();
-			for(int k=0;k<=3;k++)
+			for(int k=0;k<=2;k++)
 			{
 				int row15CoalIndex = row15Coal.nextInt(39);
 				row15[row15CoalIndex] = 8;
@@ -295,7 +295,7 @@ public class Generate
 
 			// Set 25% Iron (4)
 			Random row16Iron = new Random();
-			for(int k=0;k<=2;k++)
+			for(int k=0;k<=3;k++)
 			{
 				int row16IronIndex = row16Iron.nextInt(39);
 				row16[row16IronIndex] = 4;
@@ -303,7 +303,7 @@ public class Generate
 
 			// Set 25% Coal (8)
 			Random row16Coal = new Random();
-			for(int k=0;k<=3;k++)
+			for(int k=0;k<=2;k++)
 			{
 				int row16CoalIndex = row16Coal.nextInt(39);
 				row16[row16CoalIndex] = 8;
@@ -320,7 +320,7 @@ public class Generate
 
 			// Set 25% Iron (4)
 			Random row17Iron = new Random();
-			for(int k=0;k<=2;k++)
+			for(int k=0;k<=3;k++)
 			{
 				int row17IronIndex = row17Iron.nextInt(39);
 				row17[row17IronIndex] = 4;
@@ -328,7 +328,7 @@ public class Generate
 
 			// Set 25% Coal (8)
 			Random row17Coal = new Random();
-			for(int k=0;k<=3;k++)
+			for(int k=0;k<=2;k++)
 			{
 				int row17CoalIndex = row17Coal.nextInt(39);
 				row17[row17CoalIndex] = 8;
@@ -345,7 +345,7 @@ public class Generate
 
 			// Set 25% Iron (4)
 			Random row18Iron = new Random();
-			for(int k=0;k<=2;k++)
+			for(int k=0;k<=3;k++)
 			{
 				int row18IronIndex = row18Iron.nextInt(39);
 				row18[row18IronIndex] = 4;
@@ -353,7 +353,7 @@ public class Generate
 
 			// Set 25% Coal (8)
 			Random row18Coal = new Random();
-			for(int k=0;k<=3;k++)
+			for(int k=0;k<=2;k++)
 			{
 				int row18CoalIndex = row18Coal.nextInt(39);
 				row18[row18CoalIndex] = 8;
