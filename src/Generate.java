@@ -50,7 +50,7 @@ public class Generate
 	public static int row23[] = new int[40];
 	public static int row24[] = new int[40];
 	public static int row25[] = new int[40];
-	private static int rand1, rand2, rand3, rand4, rand5, rand6, rand7, rand8, rand9, rand10;
+	private static int rand1, rand2, rand3, rand4, rand5, rand6, rand7, rand8, rand9, rand10, rand11, rand12, rand13, rand14, rand15;
 
 	public static void getSeed()
 	{
@@ -157,6 +157,15 @@ public class Generate
 		{
 			rand10 = rand8 - rand9;
 		}
+
+		if (rand1 > rand10)
+		{
+			rand11 = rand1-rand10;
+		}
+		else
+		{
+			rand11 = rand10-rand1;
+		}
 	}
 
 	public static void setConstants()
@@ -203,356 +212,714 @@ public class Generate
 
 	public static void assignRandom()
 	{
-		/////////////////////
-		//////Top Layer//////
-		/////////////////////
-		int randTotal = rand1+rand2+rand3+rand5;
-		if(randTotal > rand1+rand4+rand3)
+		if(wantSeed.equals("true"))
 		{
-			Arrays.fill(row5,9);
+			/////////////////////
+			//////Top Layer//////
+			/////////////////////
+			int randTotal = rand1+rand2+rand3+rand5;
+			if(randTotal > rand1+rand4+rand3)
+			{
+				Arrays.fill(row5,9);
+			}
+
+			/////////////////////
+			//Intermediate Zone//
+			/////////////////////
+
+			//////////////////////////////////////////////////////////////////////// row9
+			// Set 50% dirt (1)
+			Random row9Dirt = new Random();
+			for(int k=0;k<=20;k++)
+			{
+				int row9DirtIndex = row9Dirt.nextInt(39);
+				row9[row9DirtIndex] = 1;
+			}
+
+			// Set 50% rock (2)
+			Random row9Rock = new Random();
+			for(int k=0;k<=20;k++)
+			{
+				int row9RockIndex = row9Rock.nextInt(39);
+				row9[row9RockIndex] = 2;
+			}
+
+			//////////////////////////////////////////////////////////////////////// row10
+			// Set 50% dirt (1)
+			Random row10Dirt = new Random();
+			for(int k=0;k<=20;k++)
+			{
+				int row10DirtIndex = row10Dirt.nextInt(39);
+				row10[row10DirtIndex] = 1;
+			}
+
+			// Set 50% rock (2)
+			Random row10Rock = new Random();
+			for(int k=0;k<=20;k++)
+			{
+				int row10RockIndex = row10Rock.nextInt(39);
+				row10[row10RockIndex] = 2;
+			}
+
+			/////////////////////
+			//Top Rock Zone    //
+			/////////////////////
+
+			//////////////////////////////////////////////////////////////////////// row11
+			// Set 75% Rock (1)
+			Random row11Rock = new Random();
+			for(int k=0;k<=30;k++)
+			{
+				int row11RockIndex = row11Rock.nextInt(39);
+				row11[row11RockIndex] = 2;
+			}
+
+			// Set 25% Coal (8)
+			Random row11Iron = new Random();
+			for(int k=0;k<=6;k++)
+			{
+				int row11IronIndex = row11Iron.nextInt(39);
+				row11[row11IronIndex] = 8;
+			}
+
+			//////////////////////////////////////////////////////////////////////// row12
+			// Set 75% Rock (1)
+			Random row12Rock = new Random();
+			for(int k=0;k<=30;k++)
+			{
+				int row12RockIndex = row12Rock.nextInt(39);
+				row12[row12RockIndex] = 2;
+			}
+
+			// Set 25% Coal (8)
+			Random row12Iron = new Random();
+			for(int k=0;k<=6;k++)
+			{
+				int row12IronIndex = row12Iron.nextInt(39);
+				row12[row12IronIndex] = 8;
+			}
+
+			//////////////////////////////////////////////////////////////////////// row13
+			// Set 75% Rock (1)
+			Random row13Rock = new Random();
+			for(int k=0;k<=30;k++)
+			{
+				int row13RockIndex = row13Rock.nextInt(39);
+				row13[row13RockIndex] = 2;
+			}
+
+			// Set 25% Coal (8)
+			Random row13Iron = new Random();
+			for(int k=0;k<=6;k++)
+			{
+				int row13IronIndex = row13Iron.nextInt(39);
+				row13[row13IronIndex] = 8;
+			}
+
+			//////////////////////////////////////////////////////////////////////// row14
+			// Set 75% Rock (1)
+			Random row14Rock = new Random();
+			for(int k=0;k<=30;k++)
+			{
+				int row14RockIndex = row14Rock.nextInt(39);
+				row14[row14RockIndex] = 2;
+			}
+
+			// Set 25% Coal (8)
+			Random row14Iron = new Random();
+			for(int k=0;k<=6;k++)
+			{
+				int row14IronIndex = row14Iron.nextInt(39);
+				row14[row14IronIndex] = 8;
+			}
+
+			/////////////////////
+			//Mid Rock Zone    //
+			/////////////////////
+
+			//////////////////////////////////////////////////////////////////////// row15
+			// Set 50% Rock (1)
+			Random row15Rock = new Random();
+			for(int k=0;k<=20;k++)
+			{
+				int row15RockIndex = row15Rock.nextInt(39);
+				row15[row15RockIndex] = 2;
+			}
+
+			// Set 25% Iron (4)
+			Random row15Diamond = new Random();
+			for(int k=0;k<=2;k++)
+			{
+				int row15DiamondIndex = row15Diamond.nextInt(39);
+				row15[row15DiamondIndex] = 4;
+			}
+
+			// Set 25% Coal (8)
+			Random row15Redstone = new Random();
+			for(int k=0;k<=3;k++)
+			{
+				int row15RedstoneIndex = row15Redstone.nextInt(39);
+				row15[row15RedstoneIndex] = 8;
+			}
+
+			//////////////////////////////////////////////////////////////////////// row16
+			// Set 50% Rock (1)
+			Random row16Rock = new Random();
+			for(int k=0;k<=20;k++)
+			{
+				int row16RockIndex = row16Rock.nextInt(39);
+				row16[row16RockIndex] = 2;
+			}
+
+			// Set 25% Iron (4)
+			Random row16Diamond = new Random();
+			for(int k=0;k<=2;k++)
+			{
+				int row16DiamondIndex = row16Diamond.nextInt(39);
+				row16[row16DiamondIndex] = 4;
+			}
+
+			// Set 25% Coal (8)
+			Random row16Redstone = new Random();
+			for(int k=0;k<=3;k++)
+			{
+				int row16RedstoneIndex = row16Redstone.nextInt(39);
+				row16[row16RedstoneIndex] = 8;
+			}
+
+			//////////////////////////////////////////////////////////////////////// row17
+			// Set 50% Rock (1)
+			Random row17Rock = new Random();
+			for(int k=0;k<=20;k++)
+			{
+				int row17RockIndex = row17Rock.nextInt(39);
+				row17[row17RockIndex] = 2;
+			}
+
+			// Set 25% Iron (4)
+			Random row17Diamond = new Random();
+			for(int k=0;k<=2;k++)
+			{
+				int row17DiamondIndex = row17Diamond.nextInt(39);
+				row17[row17DiamondIndex] = 4;
+			}
+
+			// Set 25% Coal (8)
+			Random row17Redstone = new Random();
+			for(int k=0;k<=3;k++)
+			{
+				int row17RedstoneIndex = row17Redstone.nextInt(39);
+				row17[row17RedstoneIndex] = 8;
+			}
+
+			//////////////////////////////////////////////////////////////////////// row18
+			// Set 50% Rock (1)
+			Random row18Rock = new Random();
+			for(int k=0;k<=20;k++)
+			{
+				int row18RockIndex = row18Rock.nextInt(39);
+				row18[row18RockIndex] = 2;
+			}
+
+			// Set 25% Iron (4)
+			Random row18Diamond = new Random();
+			for(int k=0;k<=2;k++)
+			{
+				int row18DiamondIndex = row18Diamond.nextInt(39);
+				row18[row18DiamondIndex] = 4;
+			}
+
+			// Set 25% Coal (8)
+			Random row18Redstone = new Random();
+			for(int k=0;k<=3;k++)
+			{
+				int row18RedstoneIndex = row18Redstone.nextInt(39);
+				row18[row18RedstoneIndex] = 8;
+			}
+
+			/////////////////////
+			//Lower Rock Zone  //
+			/////////////////////
+
+			//////////////////////////////////////////////////////////////////////// row19
+			// Set 50% Rock (1)
+			Random row19Rock = new Random();
+			for(int k=0;k<=20;k++)
+			{
+				int row19RockIndex = row19Rock.nextInt(39);
+				row19[row19RockIndex] = 2;
+			}
+
+			// Set 25% Diamond (3)
+			Random row19Diamond = new Random();
+			for(int k=0;k<=2;k++)
+			{
+				int row19DiamondIndex = row19Diamond.nextInt(39);
+				row19[row19DiamondIndex] = 3;
+			}
+
+			// Set 25% Redstone (5)
+			Random row19Redstone = new Random();
+			for(int k=0;k<=3;k++)
+			{
+				int row19RedstoneIndex = row19Redstone.nextInt(39);
+				row19[row19RedstoneIndex] = 5;
+			}
+
+			//////////////////////////////////////////////////////////////////////// row20
+			// Set 50% Rock (1)
+			Random row20Rock = new Random();
+			for(int k=0;k<=20;k++)
+			{
+				int row20RockIndex = row20Rock.nextInt(39);
+				row20[row20RockIndex] = 2;
+			}
+
+			// Set 25% Diamond (3)
+			Random row20Diamond = new Random();
+			for(int k=0;k<=2;k++)
+			{
+				int row20DiamondIndex = row20Diamond.nextInt(39);
+				row20[row20DiamondIndex] = 3;
+			}
+
+			// Set 25% Redstone (5)
+			Random row20Redstone = new Random();
+			for(int k=0;k<=3;k++)
+			{
+				int row20RedstoneIndex = row20Redstone.nextInt(39);
+				row20[row20RedstoneIndex] = 5;
+			}
+
+			//////////////////////////////////////////////////////////////////////// row21
+			// Set 50% Rock (1)
+			Random row21Rock = new Random();
+			for(int k=0;k<=20;k++)
+			{
+				int row21RockIndex = row21Rock.nextInt(39);
+				row21[row21RockIndex] = 2;
+			}
+
+			// Set 25% Diamond (3)
+			Random row21Diamond = new Random();
+			for(int k=0;k<=2;k++)
+			{
+				int row21DiamondIndex = row21Diamond.nextInt(39);
+				row21[row21DiamondIndex] = 3;
+			}
+
+			// Set 25% Redstone (5)
+			Random row21Redstone = new Random();
+			for(int k=0;k<=3;k++)
+			{
+				int row21RedstoneIndex = row21Redstone.nextInt(39);
+				row21[row21RedstoneIndex] = 5;
+			}
+
+			//////////////////////////////////////////////////////////////////////// row22
+			// Set 50% Rock (1)
+			Random row22Rock = new Random();
+			for(int k=0;k<=20;k++)
+			{
+				int row22RockIndex = row22Rock.nextInt(39);
+				row22[row22RockIndex] = 2;
+			}
+
+			// Set 25% Diamond (3)
+			Random row22Diamond = new Random();
+			for(int k=0;k<=2;k++)
+			{
+				int row22DiamondIndex = row22Diamond.nextInt(39);
+				row22[row22DiamondIndex] = 3;
+			}
+
+			// Set 25% Redstone (5)
+			Random row22Redstone = new Random();
+			for(int k=0;k<=3;k++)
+			{
+				int row22RedstoneIndex = row22Redstone.nextInt(39);
+				row22[row22RedstoneIndex] = 5;
+			}
+
+			//////////////////////////////////////////////////////////////////////// row23
+			// Set 50% Rock (1)
+			Random row23Rock = new Random();
+			for(int k=0;k<=20;k++)
+			{
+				int row23RockIndex = row23Rock.nextInt(39);
+				row23[row23RockIndex] = 2;
+			}
+
+			// Set 25% Diamond (3)
+			Random row23Diamond = new Random();
+			for(int k=0;k<=2;k++)
+			{
+				int row23DiamondIndex = row23Diamond.nextInt(39);
+				row23[row23DiamondIndex] = 3;
+			}
+
+			// Set 25% Redstone (5)
+			Random row23Redstone = new Random();
+			for(int k=0;k<=3;k++)
+			{
+				int row23RedstoneIndex = row23Redstone.nextInt(39);
+				row23[row23RedstoneIndex] = 5;
+			}
 		}
-
-		/////////////////////
-		//Intermediate Zone//
-		/////////////////////
-
-		//////////////////////////////////////////////////////////////////////// row9
-		// Set 50% dirt (1)
-		Random row9Dirt = new Random();
-		for(int k=0;k<=20;k++)
+		else
 		{
-			int row9DirtIndex = row9Dirt.nextInt(39);
-			row9[row9DirtIndex] = 1;
-		}
+			/////////////////////
+			//////Top Layer//////
+			/////////////////////
+			Random snow = new Random();
+			int willSnow = snow.nextInt(3); // 1/3 chance of snow
+			if(willSnow == 1)
+			{
+				Arrays.fill(row5,9);
+			}
 
-		// Set 50% rock (2)
-		Random row9Rock = new Random();
-		for(int k=0;k<=20;k++)
-		{
-			int row9RockIndex = row9Rock.nextInt(39);
-			row9[row9RockIndex] = 2;
-		}
+			/////////////////////
+			//Intermediate Zone//
+			/////////////////////
 
-		//////////////////////////////////////////////////////////////////////// row10
-		// Set 50% dirt (1)
-		Random row10Dirt = new Random();
-		for(int k=0;k<=20;k++)
-		{
-			int row10DirtIndex = row10Dirt.nextInt(39);
-			row10[row10DirtIndex] = 1;
-		}
+			//////////////////////////////////////////////////////////////////////// row9
+			// Set 50% dirt (1)
+			Random row9Dirt = new Random();
+			for(int k=0;k<=20;k++)
+			{
+				int row9DirtIndex = row9Dirt.nextInt(39);
+				row9[row9DirtIndex] = 1;
+			}
 
-		// Set 50% rock (2)
-		Random row10Rock = new Random();
-		for(int k=0;k<=20;k++)
-		{
-			int row10RockIndex = row10Rock.nextInt(39);
-			row10[row10RockIndex] = 2;
-		}
+			// Set 50% rock (2)
+			Random row9Rock = new Random();
+			for(int k=0;k<=20;k++)
+			{
+				int row9RockIndex = row9Rock.nextInt(39);
+				row9[row9RockIndex] = 2;
+			}
 
-		/////////////////////
-		//Top Rock Zone    //
-		/////////////////////
+			//////////////////////////////////////////////////////////////////////// row10
+			// Set 50% dirt (1)
+			Random row10Dirt = new Random();
+			for(int k=0;k<=20;k++)
+			{
+				int row10DirtIndex = row10Dirt.nextInt(39);
+				row10[row10DirtIndex] = 1;
+			}
 
-		//////////////////////////////////////////////////////////////////////// row11
-		// Set 75% Rock (1)
-		Random row11Rock = new Random();
-		for(int k=0;k<=30;k++)
-		{
-			int row11RockIndex = row11Rock.nextInt(39);
-			row11[row11RockIndex] = 2;
-		}
+			// Set 50% rock (2)
+			Random row10Rock = new Random();
+			for(int k=0;k<=20;k++)
+			{
+				int row10RockIndex = row10Rock.nextInt(39);
+				row10[row10RockIndex] = 2;
+			}
 
-		// Set 25% Coal (8)
-		Random row11Iron = new Random();
-		for(int k=0;k<=6;k++)
-		{
-			int row11IronIndex = row11Iron.nextInt(39);
-			row11[row11IronIndex] = 8;
-		}
+			/////////////////////
+			//Top Rock Zone    //
+			/////////////////////
 
-		//////////////////////////////////////////////////////////////////////// row12
-		// Set 75% Rock (1)
-		Random row12Rock = new Random();
-		for(int k=0;k<=30;k++)
-		{
-			int row12RockIndex = row12Rock.nextInt(39);
-			row12[row12RockIndex] = 2;
-		}
+			//////////////////////////////////////////////////////////////////////// row11
+			// Set 75% Rock (1)
+			Random row11Rock = new Random();
+			for(int k=0;k<=30;k++)
+			{
+				int row11RockIndex = row11Rock.nextInt(39);
+				row11[row11RockIndex] = 2;
+			}
 
-		// Set 25% Coal (8)
-		Random row12Iron = new Random();
-		for(int k=0;k<=6;k++)
-		{
-			int row12IronIndex = row12Iron.nextInt(39);
-			row12[row12IronIndex] = 8;
-		}
+			// Set 25% Coal (8)
+			Random row11Iron = new Random();
+			for(int k=0;k<=6;k++)
+			{
+				int row11IronIndex = row11Iron.nextInt(39);
+				row11[row11IronIndex] = 8;
+			}
 
-		//////////////////////////////////////////////////////////////////////// row13
-		// Set 75% Rock (1)
-		Random row13Rock = new Random();
-		for(int k=0;k<=30;k++)
-		{
-			int row13RockIndex = row13Rock.nextInt(39);
-			row13[row13RockIndex] = 2;
-		}
+			//////////////////////////////////////////////////////////////////////// row12
+			// Set 75% Rock (1)
+			Random row12Rock = new Random();
+			for(int k=0;k<=30;k++)
+			{
+				int row12RockIndex = row12Rock.nextInt(39);
+				row12[row12RockIndex] = 2;
+			}
 
-		// Set 25% Coal (8)
-		Random row13Iron = new Random();
-		for(int k=0;k<=6;k++)
-		{
-			int row13IronIndex = row13Iron.nextInt(39);
-			row13[row13IronIndex] = 8;
-		}
+			// Set 25% Coal (8)
+			Random row12Iron = new Random();
+			for(int k=0;k<=6;k++)
+			{
+				int row12IronIndex = row12Iron.nextInt(39);
+				row12[row12IronIndex] = 8;
+			}
 
-		//////////////////////////////////////////////////////////////////////// row14
-		// Set 75% Rock (1)
-		Random row14Rock = new Random();
-		for(int k=0;k<=30;k++)
-		{
-			int row14RockIndex = row14Rock.nextInt(39);
-			row14[row14RockIndex] = 2;
-		}
+			//////////////////////////////////////////////////////////////////////// row13
+			// Set 75% Rock (1)
+			Random row13Rock = new Random();
+			for(int k=0;k<=30;k++)
+			{
+				int row13RockIndex = row13Rock.nextInt(39);
+				row13[row13RockIndex] = 2;
+			}
 
-		// Set 25% Coal (8)
-		Random row14Iron = new Random();
-		for(int k=0;k<=6;k++)
-		{
-			int row14IronIndex = row14Iron.nextInt(39);
-			row14[row14IronIndex] = 8;
-		}
+			// Set 25% Coal (8)
+			Random row13Iron = new Random();
+			for(int k=0;k<=6;k++)
+			{
+				int row13IronIndex = row13Iron.nextInt(39);
+				row13[row13IronIndex] = 8;
+			}
 
-		/////////////////////
-		//Mid Rock Zone    //
-		/////////////////////
+			//////////////////////////////////////////////////////////////////////// row14
+			// Set 75% Rock (1)
+			Random row14Rock = new Random();
+			for(int k=0;k<=30;k++)
+			{
+				int row14RockIndex = row14Rock.nextInt(39);
+				row14[row14RockIndex] = 2;
+			}
 
-		//////////////////////////////////////////////////////////////////////// row15
-		// Set 50% Rock (1)
-		Random row15Rock = new Random();
-		for(int k=0;k<=20;k++)
-		{
-			int row15RockIndex = row15Rock.nextInt(39);
-			row15[row15RockIndex] = 2;
-		}
+			// Set 25% Coal (8)
+			Random row14Iron = new Random();
+			for(int k=0;k<=6;k++)
+			{
+				int row14IronIndex = row14Iron.nextInt(39);
+				row14[row14IronIndex] = 8;
+			}
 
-		// Set 25% Iron (4)
-		Random row15Diamond = new Random();
-		for(int k=0;k<=2;k++)
-		{
-			int row15DiamondIndex = row15Diamond.nextInt(39);
-			row15[row15DiamondIndex] = 4;
-		}
+			/////////////////////
+			//Mid Rock Zone    //
+			/////////////////////
 
-		// Set 25% Coal (8)
-		Random row15Redstone = new Random();
-		for(int k=0;k<=3;k++)
-		{
-			int row15RedstoneIndex = row15Redstone.nextInt(39);
-			row15[row15RedstoneIndex] = 8;
-		}
+			//////////////////////////////////////////////////////////////////////// row15
+			// Set 50% Rock (1)
+			Random row15Rock = new Random();
+			for(int k=0;k<=20;k++)
+			{
+				int row15RockIndex = row15Rock.nextInt(39);
+				row15[row15RockIndex] = 2;
+			}
 
-		//////////////////////////////////////////////////////////////////////// row16
-		// Set 50% Rock (1)
-		Random row16Rock = new Random();
-		for(int k=0;k<=20;k++)
-		{
-			int row16RockIndex = row16Rock.nextInt(39);
-			row16[row16RockIndex] = 2;
-		}
+			// Set 25% Iron (4)
+			Random row15Diamond = new Random();
+			for(int k=0;k<=2;k++)
+			{
+				int row15DiamondIndex = row15Diamond.nextInt(39);
+				row15[row15DiamondIndex] = 4;
+			}
 
-		// Set 25% Iron (4)
-		Random row16Diamond = new Random();
-		for(int k=0;k<=2;k++)
-		{
-			int row16DiamondIndex = row16Diamond.nextInt(39);
-			row16[row16DiamondIndex] = 4;
-		}
+			// Set 25% Coal (8)
+			Random row15Redstone = new Random();
+			for(int k=0;k<=3;k++)
+			{
+				int row15RedstoneIndex = row15Redstone.nextInt(39);
+				row15[row15RedstoneIndex] = 8;
+			}
 
-		// Set 25% Coal (8)
-		Random row16Redstone = new Random();
-		for(int k=0;k<=3;k++)
-		{
-			int row16RedstoneIndex = row16Redstone.nextInt(39);
-			row16[row16RedstoneIndex] = 8;
-		}
+			//////////////////////////////////////////////////////////////////////// row16
+			// Set 50% Rock (1)
+			Random row16Rock = new Random();
+			for(int k=0;k<=20;k++)
+			{
+				int row16RockIndex = row16Rock.nextInt(39);
+				row16[row16RockIndex] = 2;
+			}
 
-		//////////////////////////////////////////////////////////////////////// row17
-		// Set 50% Rock (1)
-		Random row17Rock = new Random();
-		for(int k=0;k<=20;k++)
-		{
-			int row17RockIndex = row17Rock.nextInt(39);
-			row17[row17RockIndex] = 2;
-		}
+			// Set 25% Iron (4)
+			Random row16Diamond = new Random();
+			for(int k=0;k<=2;k++)
+			{
+				int row16DiamondIndex = row16Diamond.nextInt(39);
+				row16[row16DiamondIndex] = 4;
+			}
 
-		// Set 25% Iron (4)
-		Random row17Diamond = new Random();
-		for(int k=0;k<=2;k++)
-		{
-			int row17DiamondIndex = row17Diamond.nextInt(39);
-			row17[row17DiamondIndex] = 4;
-		}
+			// Set 25% Coal (8)
+			Random row16Redstone = new Random();
+			for(int k=0;k<=3;k++)
+			{
+				int row16RedstoneIndex = row16Redstone.nextInt(39);
+				row16[row16RedstoneIndex] = 8;
+			}
 
-		// Set 25% Coal (8)
-		Random row17Redstone = new Random();
-		for(int k=0;k<=3;k++)
-		{
-			int row17RedstoneIndex = row17Redstone.nextInt(39);
-			row17[row17RedstoneIndex] = 8;
-		}
+			//////////////////////////////////////////////////////////////////////// row17
+			// Set 50% Rock (1)
+			Random row17Rock = new Random();
+			for(int k=0;k<=20;k++)
+			{
+				int row17RockIndex = row17Rock.nextInt(39);
+				row17[row17RockIndex] = 2;
+			}
 
-		//////////////////////////////////////////////////////////////////////// row18
-		// Set 50% Rock (1)
-		Random row18Rock = new Random();
-		for(int k=0;k<=20;k++)
-		{
-			int row18RockIndex = row18Rock.nextInt(39);
-			row18[row18RockIndex] = 2;
-		}
+			// Set 25% Iron (4)
+			Random row17Diamond = new Random();
+			for(int k=0;k<=2;k++)
+			{
+				int row17DiamondIndex = row17Diamond.nextInt(39);
+				row17[row17DiamondIndex] = 4;
+			}
 
-		// Set 25% Iron (4)
-		Random row18Diamond = new Random();
-		for(int k=0;k<=2;k++)
-		{
-			int row18DiamondIndex = row18Diamond.nextInt(39);
-			row18[row18DiamondIndex] = 4;
-		}
+			// Set 25% Coal (8)
+			Random row17Redstone = new Random();
+			for(int k=0;k<=3;k++)
+			{
+				int row17RedstoneIndex = row17Redstone.nextInt(39);
+				row17[row17RedstoneIndex] = 8;
+			}
 
-		// Set 25% Coal (8)
-		Random row18Redstone = new Random();
-		for(int k=0;k<=3;k++)
-		{
-			int row18RedstoneIndex = row18Redstone.nextInt(39);
-			row18[row18RedstoneIndex] = 8;
-		}
+			//////////////////////////////////////////////////////////////////////// row18
+			// Set 50% Rock (1)
+			Random row18Rock = new Random();
+			for(int k=0;k<=20;k++)
+			{
+				int row18RockIndex = row18Rock.nextInt(39);
+				row18[row18RockIndex] = 2;
+			}
 
-		/////////////////////
-		//Lower Rock Zone  //
-		/////////////////////
+			// Set 25% Iron (4)
+			Random row18Diamond = new Random();
+			for(int k=0;k<=2;k++)
+			{
+				int row18DiamondIndex = row18Diamond.nextInt(39);
+				row18[row18DiamondIndex] = 4;
+			}
 
-		//////////////////////////////////////////////////////////////////////// row19
-		// Set 50% Rock (1)
-		Random row19Rock = new Random();
-		for(int k=0;k<=20;k++)
-		{
-			int row19RockIndex = row19Rock.nextInt(39);
-			row19[row19RockIndex] = 2;
-		}
+			// Set 25% Coal (8)
+			Random row18Redstone = new Random();
+			for(int k=0;k<=3;k++)
+			{
+				int row18RedstoneIndex = row18Redstone.nextInt(39);
+				row18[row18RedstoneIndex] = 8;
+			}
 
-		// Set 25% Diamond (3)
-		Random row19Diamond = new Random();
-		for(int k=0;k<=2;k++)
-		{
-			int row19DiamondIndex = row19Diamond.nextInt(39);
-			row19[row19DiamondIndex] = 3;
-		}
+			/////////////////////
+			//Lower Rock Zone  //
+			/////////////////////
 
-		// Set 25% Redstone (5)
-		Random row19Redstone = new Random();
-		for(int k=0;k<=3;k++)
-		{
-			int row19RedstoneIndex = row19Redstone.nextInt(39);
-			row19[row19RedstoneIndex] = 5;
-		}
+			//////////////////////////////////////////////////////////////////////// row19
+			// Set 50% Rock (1)
+			Random row19Rock = new Random();
+			for(int k=0;k<=20;k++)
+			{
+				int row19RockIndex = row19Rock.nextInt(39);
+				row19[row19RockIndex] = 2;
+			}
 
-		//////////////////////////////////////////////////////////////////////// row20
-		// Set 50% Rock (1)
-		Random row20Rock = new Random();
-		for(int k=0;k<=20;k++)
-		{
-			int row20RockIndex = row20Rock.nextInt(39);
-			row20[row20RockIndex] = 2;
-		}
+			// Set 25% Diamond (3)
+			Random row19Diamond = new Random();
+			for(int k=0;k<=2;k++)
+			{
+				int row19DiamondIndex = row19Diamond.nextInt(39);
+				row19[row19DiamondIndex] = 3;
+			}
 
-		// Set 25% Diamond (3)
-		Random row20Diamond = new Random();
-		for(int k=0;k<=2;k++)
-		{
-			int row20DiamondIndex = row20Diamond.nextInt(39);
-			row20[row20DiamondIndex] = 3;
-		}
+			// Set 25% Redstone (5)
+			Random row19Redstone = new Random();
+			for(int k=0;k<=3;k++)
+			{
+				int row19RedstoneIndex = row19Redstone.nextInt(39);
+				row19[row19RedstoneIndex] = 5;
+			}
 
-		// Set 25% Redstone (5)
-		Random row20Redstone = new Random();
-		for(int k=0;k<=3;k++)
-		{
-			int row20RedstoneIndex = row20Redstone.nextInt(39);
-			row20[row20RedstoneIndex] = 5;
-		}
+			//////////////////////////////////////////////////////////////////////// row20
+			// Set 50% Rock (1)
+			Random row20Rock = new Random();
+			for(int k=0;k<=20;k++)
+			{
+				int row20RockIndex = row20Rock.nextInt(39);
+				row20[row20RockIndex] = 2;
+			}
 
-		//////////////////////////////////////////////////////////////////////// row21
-		// Set 50% Rock (1)
-		Random row21Rock = new Random();
-		for(int k=0;k<=20;k++)
-		{
-			int row21RockIndex = row21Rock.nextInt(39);
-			row21[row21RockIndex] = 2;
-		}
+			// Set 25% Diamond (3)
+			Random row20Diamond = new Random();
+			for(int k=0;k<=2;k++)
+			{
+				int row20DiamondIndex = row20Diamond.nextInt(39);
+				row20[row20DiamondIndex] = 3;
+			}
 
-		// Set 25% Diamond (3)
-		Random row21Diamond = new Random();
-		for(int k=0;k<=2;k++)
-		{
-			int row21DiamondIndex = row21Diamond.nextInt(39);
-			row21[row21DiamondIndex] = 3;
-		}
+			// Set 25% Redstone (5)
+			Random row20Redstone = new Random();
+			for(int k=0;k<=3;k++)
+			{
+				int row20RedstoneIndex = row20Redstone.nextInt(39);
+				row20[row20RedstoneIndex] = 5;
+			}
 
-		// Set 25% Redstone (5)
-		Random row21Redstone = new Random();
-		for(int k=0;k<=3;k++)
-		{
-			int row21RedstoneIndex = row21Redstone.nextInt(39);
-			row21[row21RedstoneIndex] = 5;
-		}
+			//////////////////////////////////////////////////////////////////////// row21
+			// Set 50% Rock (1)
+			Random row21Rock = new Random();
+			for(int k=0;k<=20;k++)
+			{
+				int row21RockIndex = row21Rock.nextInt(39);
+				row21[row21RockIndex] = 2;
+			}
 
-		//////////////////////////////////////////////////////////////////////// row22
-		// Set 50% Rock (1)
-		Random row22Rock = new Random();
-		for(int k=0;k<=20;k++)
-		{
-			int row22RockIndex = row22Rock.nextInt(39);
-			row22[row22RockIndex] = 2;
-		}
+			// Set 25% Diamond (3)
+			Random row21Diamond = new Random();
+			for(int k=0;k<=2;k++)
+			{
+				int row21DiamondIndex = row21Diamond.nextInt(39);
+				row21[row21DiamondIndex] = 3;
+			}
 
-		// Set 25% Diamond (3)
-		Random row22Diamond = new Random();
-		for(int k=0;k<=2;k++)
-		{
-			int row22DiamondIndex = row22Diamond.nextInt(39);
-			row22[row22DiamondIndex] = 3;
-		}
+			// Set 25% Redstone (5)
+			Random row21Redstone = new Random();
+			for(int k=0;k<=3;k++)
+			{
+				int row21RedstoneIndex = row21Redstone.nextInt(39);
+				row21[row21RedstoneIndex] = 5;
+			}
 
-		// Set 25% Redstone (5)
-		Random row22Redstone = new Random();
-		for(int k=0;k<=3;k++)
-		{
-			int row22RedstoneIndex = row22Redstone.nextInt(39);
-			row22[row22RedstoneIndex] = 5;
-		}
+			//////////////////////////////////////////////////////////////////////// row22
+			// Set 50% Rock (1)
+			Random row22Rock = new Random();
+			for(int k=0;k<=20;k++)
+			{
+				int row22RockIndex = row22Rock.nextInt(39);
+				row22[row22RockIndex] = 2;
+			}
 
-		//////////////////////////////////////////////////////////////////////// row23
-		// Set 50% Rock (1)
-		Random row23Rock = new Random();
-		for(int k=0;k<=20;k++)
-		{
-			int row23RockIndex = row23Rock.nextInt(39);
-			row23[row23RockIndex] = 2;
-		}
+			// Set 25% Diamond (3)
+			Random row22Diamond = new Random();
+			for(int k=0;k<=2;k++)
+			{
+				int row22DiamondIndex = row22Diamond.nextInt(39);
+				row22[row22DiamondIndex] = 3;
+			}
 
-		// Set 25% Diamond (3)
-		Random row23Diamond = new Random();
-		for(int k=0;k<=2;k++)
-		{
-			int row23DiamondIndex = row23Diamond.nextInt(39);
-			row23[row23DiamondIndex] = 3;
-		}
+			// Set 25% Redstone (5)
+			Random row22Redstone = new Random();
+			for(int k=0;k<=3;k++)
+			{
+				int row22RedstoneIndex = row22Redstone.nextInt(39);
+				row22[row22RedstoneIndex] = 5;
+			}
 
-		// Set 25% Redstone (5)
-		Random row23Redstone = new Random();
-		for(int k=0;k<=3;k++)
-		{
-			int row23RedstoneIndex = row23Redstone.nextInt(39);
-			row23[row23RedstoneIndex] = 5;
+			//////////////////////////////////////////////////////////////////////// row23
+			// Set 50% Rock (1)
+			Random row23Rock = new Random();
+			for(int k=0;k<=20;k++)
+			{
+				int row23RockIndex = row23Rock.nextInt(39);
+				row23[row23RockIndex] = 2;
+			}
+
+			// Set 25% Diamond (3)
+			Random row23Diamond = new Random();
+			for(int k=0;k<=2;k++)
+			{
+				int row23DiamondIndex = row23Diamond.nextInt(39);
+				row23[row23DiamondIndex] = 3;
+			}
+
+			// Set 25% Redstone (5)
+			Random row23Redstone = new Random();
+			for(int k=0;k<=3;k++)
+			{
+				int row23RedstoneIndex = row23Redstone.nextInt(39);
+				row23[row23RedstoneIndex] = 5;
+			}
 		}
 	}
 }
