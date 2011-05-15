@@ -50,7 +50,7 @@ public class Generate
 	public static int row23[] = new int[40];
 	public static int row24[] = new int[40];
 	public static int row25[] = new int[40];
-	private static int rand1, rand2, rand3, rand4, rand5, rand6, rand7, rand8, rand9, rand10, rand11, rand12, rand13, rand14, rand15;
+	private static int rand[] = new int[8];
 
 	public static void getSeed()
 	{
@@ -81,91 +81,14 @@ public class Generate
 		// See documentation for an explanation
 
 		Random random1 = new Random(seed);
-		rand1 = random1.nextInt(1001) + 0;
-
-		Random random2 = new Random(rand1);
-		rand2 = random2.nextInt(1001) + 0;
-
-		if (rand1 > rand2)
-		{
-			rand3 = rand1-rand2;
-		}
-		else
-		{
-			rand3 = rand2-rand1;
-		}
-
-		Random random4 = new Random(rand3);
-		rand4 = random4.nextInt(1001) + 0;
-
-		if (rand3 > rand1)
-		{
-			rand5 = rand3 - rand1;
-		}
-		else
-		{
-			rand5 = rand1 - rand3;
-		}
-
-		if (rand3 > rand2)
-		{
-			rand6 = rand3 - rand2;
-		}
-		else
-		{
-			rand6 = rand2 - rand3;
-		}
-
-		if (rand5 > rand2)
-		{
-			rand7 = rand5 - rand2;
-		}
-		else
-		{
-			rand7 = rand2 - rand5;
-		}
-
-		if (rand3 > rand5)
-		{
-			rand8 = rand3 - rand5;
-			rand8 = rand8 * rand4;
-		}
-		else
-		{
-			rand8 = rand5 - rand3;
-			rand8 = rand8 * rand4;
-		}
-
-		if (rand7 > rand1)
-		{
-			rand9 = rand7 - rand1;
-			rand9 = rand9 * rand4;
-			rand9 = rand9 / 2;
-		}
-		else
-		{
-			rand9 = rand1 - rand7;
-			rand9 = rand9 * rand4;
-			rand9 = rand9 / 2;
-		}
-
-		if (rand9 > rand8)
-		{
-			rand10 = rand9 - rand8;
-		}
-		else
-		{
-			rand10 = rand8 - rand9;
-		}
-
-		if (rand1 > rand10)
-		{
-			rand11 = rand1-rand10;
-		}
-		else
-		{
-			rand11 = rand10-rand1;
-		}
+		rand[0] = random1.nextInt(3); // Snow seed
+		rand[1] = 1;
+		rand[2] = 1;
+		rand[3] = 1;
+		rand[4] = 1;
+		rand[5] = 1;
+		rand[6] = 1;
+		rand[7] = 1;
 	}
 
 	public static void setConstants()
@@ -217,8 +140,7 @@ public class Generate
 			/////////////////////
 			//////Top Layer//////
 			/////////////////////
-			int randTotal = rand1+rand2+rand3+rand5;
-			if(randTotal > rand1+rand4+rand3)
+			if(rand[0] == 1)
 			{
 				Arrays.fill(row5,9);
 			}
