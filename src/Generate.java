@@ -52,7 +52,20 @@ public class Generate
 	public static int row23[] = new int[40];
 	public static int row24[] = new int[40];
 	public static int row25[] = new int[40];
-	private static int rand[] = new int[8];
+	private static int rand[] = new int[1];
+	/*
+	// Rock level seeds
+	Random random1 = new Random(seed);
+	Random random2 = new Random(seed);
+	Random random3 = new Random(seed);
+	Random random4 = new Random(seed);
+
+	// for use with rand[1] through rand[4] on lower rock level
+	Random random5 = new Random(seed);
+
+	// Intermediate level seeds
+	Random random6 = new Random(seed);
+	Random random7 = new Random(seed); */
 
 	public static void getSeed()
 	{
@@ -85,25 +98,6 @@ public class Generate
 		// Snow seed
 		Random random0 = new Random(seed);
 		rand[0] = random0.nextInt(3);
-
-		// Rock level seeds
-		Random random1 = new Random(rand[0]);
-		rand[1] = random1.nextInt();;
-		System.out.println(rand[1]);
-
-		Random random2 = new Random(rand[1]);
-		rand[2] = random2.nextInt();;
-
-		Random random3 = new Random(rand[2]);
-		rand[3] = random3.nextInt();;
-
-		Random random4 = new Random(rand[3]);
-		rand[4] = random4.nextInt();;
-
-		rand[5] = 1; // for use with rand[1] through rand[4] on lower rock level
-
-		rand[6] = 1; // Intermediate level seeds
-		rand[7] = 1;
 	}
 
 	public static void setConstants()
@@ -166,19 +160,13 @@ public class Generate
 
 			//////////////////////////////////////////////////////////////////////// row9
 			// Set 50% dirt (1)
-			Random row9Dirt = new Random();
+			int row9seed = seed;
+			Random row9Dirt = new Random(row9seed);
 			for(int k=0;k<=20;k++)
 			{
 				int row9DirtIndex = row9Dirt.nextInt(39);
 				row9[row9DirtIndex] = 1;
-			}
-
-			// Set 50% rock (2)
-			Random row9Rock = new Random();
-			for(int k=0;k<=20;k++)
-			{
-				int row9RockIndex = row9Rock.nextInt(39);
-				row9[row9RockIndex] = 2;
+				row9seed += 1;
 			}
 
 			//////////////////////////////////////////////////////////////////////// row10
