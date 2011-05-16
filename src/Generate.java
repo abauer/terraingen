@@ -186,70 +186,82 @@ public class Generate
 
 			//////////////////////////////////////////////////////////////////////// row11
 			// Set 75% Rock (1)
-			Random row11Rock = new Random();
+			int row11seed = row10seed;
+			Random row11Rock = new Random(row11seed);
 			for(int k=0;k<=30;k++)
 			{
 				int row11RockIndex = row11Rock.nextInt(39);
 				row11[row11RockIndex] = 2;
+				row11seed++;
 			}
 
 			// Set 25% Coal (8)
-			Random row11Coal = new Random();
+			Random row11Coal = new Random(row11seed);
 			for(int k=0;k<=6;k++)
 			{
 				int row11CoalIndex = row11Coal.nextInt(39);
 				row11[row11CoalIndex] = 8;
+				row11seed++;
 			}
 
 			//////////////////////////////////////////////////////////////////////// row12
 			// Set 75% Rock (1)
-			Random row12Rock = new Random();
+			int row12seed = row11seed;
+			Random row12Rock = new Random(row12seed);
 			for(int k=0;k<=30;k++)
 			{
 				int row12RockIndex = row12Rock.nextInt(39);
 				row12[row12RockIndex] = 2;
+				row12seed++;
 			}
 
 			// Set 25% Coal (8)
-			Random row12Coal = new Random();
+			Random row12Coal = new Random(row12seed);
 			for(int k=0;k<=6;k++)
 			{
 				int row12CoalIndex = row12Coal.nextInt(39);
 				row12[row12CoalIndex] = 8;
+				row12seed++;
 			}
 
 			//////////////////////////////////////////////////////////////////////// row13
 			// Set 75% Rock (1)
-			Random row13Rock = new Random();
+			int row13seed = row12seed;
+			Random row13Rock = new Random(row13seed);
 			for(int k=0;k<=30;k++)
 			{
 				int row13RockIndex = row13Rock.nextInt(39);
 				row13[row13RockIndex] = 2;
+				row13seed++;
 			}
 
 			// Set 25% Coal (8)
-			Random row13Coal = new Random();
+			Random row13Coal = new Random(row13seed);
 			for(int k=0;k<=6;k++)
 			{
 				int row13CoalIndex = row13Coal.nextInt(39);
 				row13[row13CoalIndex] = 8;
+				row13seed++;
 			}
 
 			//////////////////////////////////////////////////////////////////////// row14
 			// Set 75% Rock (1)
-			Random row14Rock = new Random();
+			int row14seed = row13seed;
+			Random row14Rock = new Random(row14seed);
 			for(int k=0;k<=30;k++)
 			{
 				int row14RockIndex = row14Rock.nextInt(39);
 				row14[row14RockIndex] = 2;
+				row14seed++;
 			}
 
 			// Set 25% Coal (8)
-			Random row14Coal = new Random();
+			Random row14Coal = new Random(row14seed);
 			for(int k=0;k<=6;k++)
 			{
 				int row14CoalIndex = row14Coal.nextInt(39);
 				row14[row14CoalIndex] = 8;
+				row14seed++;
 			}
 
 			/////////////////////
@@ -258,52 +270,60 @@ public class Generate
 
 			//////////////////////////////////////////////////////////////////////// row15
 			// Set 50% Rock (1)
-			Random row15Rock = new Random();
+			int row15seed = row14seed;
+			Random row15Rock = new Random(row15seed);
 			for(int k=0;k<=20;k++)
 			{
 				int row15RockIndex = row15Rock.nextInt(39);
 				row15[row15RockIndex] = 2;
+				row15seed++;
 			}
 
 			// Set 25% Iron (4)
-			Random row15Iron = new Random();
+			Random row15Iron = new Random(row15seed);
 			for(int k=0;k<=3;k++)
 			{
 				int row15IronIndex = row15Iron.nextInt(39);
 				row15[row15IronIndex] = 4;
+				row15seed++;
 			}
 
 			// Set 25% Coal (8)
-			Random row15Coal = new Random();
+			Random row15Coal = new Random(row15seed);
 			for(int k=0;k<=2;k++)
 			{
 				int row15CoalIndex = row15Coal.nextInt(39);
 				row15[row15CoalIndex] = 8;
+				row15seed++;
 			}
 
 			//////////////////////////////////////////////////////////////////////// row16
 			// Set 50% Rock (1)
-			Random row16Rock = new Random();
+			int row16seed = row15seed;
+			Random row16Rock = new Random(row16seed);
 			for(int k=0;k<=20;k++)
 			{
 				int row16RockIndex = row16Rock.nextInt(39);
 				row16[row16RockIndex] = 2;
+				row16seed++;
 			}
 
 			// Set 25% Iron (4)
-			Random row16Iron = new Random();
+			Random row16Iron = new Random(row16seed);
 			for(int k=0;k<=3;k++)
 			{
 				int row16IronIndex = row16Iron.nextInt(39);
 				row16[row16IronIndex] = 4;
+				row16seed++;
 			}
 
 			// Set 25% Coal (8)
-			Random row16Coal = new Random();
+			Random row16Coal = new Random(row16seed);
 			for(int k=0;k<=2;k++)
 			{
 				int row16CoalIndex = row16Coal.nextInt(39);
 				row16[row16CoalIndex] = 8;
+				row16seed++;
 			}
 
 			//////////////////////////////////////////////////////////////////////// row17
