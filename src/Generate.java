@@ -15,6 +15,8 @@
  *	7 - Dirt (with grass)
  *  8 - Coal
  *  9 - Dirt (with snow)
+ *
+ *	Full documentation in doc/
  */
 
 import java.util.Arrays;
@@ -77,17 +79,30 @@ public class Generate
 
 	private static void makeSeeds()
 	{
-		// Makes seeds from seeds for usage later...
-		// See documentation for an explanation
+		// Makes seeds from seeds
+		// See documentation (doc/)
 
-		Random random1 = new Random(seed);
-		rand[0] = random1.nextInt(3); // Snow seed
-		rand[1] = 1;
-		rand[2] = 1;
-		rand[3] = 1;
-		rand[4] = 1;
-		rand[5] = 1;
-		rand[6] = 1;
+		// Snow seed
+		Random random0 = new Random(seed);
+		rand[0] = random0.nextInt(3);
+
+		// Rock level seeds
+		Random random1 = new Random(rand[0]);
+		rand[1] = random1.nextInt();;
+		System.out.println(rand[1]);
+
+		Random random2 = new Random(rand[1]);
+		rand[2] = random2.nextInt();;
+
+		Random random3 = new Random(rand[2]);
+		rand[3] = random3.nextInt();;
+
+		Random random4 = new Random(rand[3]);
+		rand[4] = random4.nextInt();;
+
+		rand[5] = 1; // for use with rand[1] through rand[4] on lower rock level
+
+		rand[6] = 1; // Intermediate level seeds
 		rand[7] = 1;
 	}
 
