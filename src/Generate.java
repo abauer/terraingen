@@ -171,19 +171,13 @@ public class Generate
 
 			//////////////////////////////////////////////////////////////////////// row10
 			// Set 50% dirt (1)
-			Random row10Dirt = new Random();
+			int row10seed = row9seed;
+			Random row10Dirt = new Random(row10seed);
 			for(int k=0;k<=20;k++)
 			{
 				int row10DirtIndex = row10Dirt.nextInt(39);
 				row10[row10DirtIndex] = 1;
-			}
-
-			// Set 50% rock (2)
-			Random row10Rock = new Random();
-			for(int k=0;k<=20;k++)
-			{
-				int row10RockIndex = row10Rock.nextInt(39);
-				row10[row10RockIndex] = 2;
+				row10seed += 1;
 			}
 
 			/////////////////////
