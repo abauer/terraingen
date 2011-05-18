@@ -93,7 +93,7 @@ public class terraingen extends java.applet.Applet
 
 		// ROW 1
 		int x = 0;
-		int y = 125;
+		int y = 50;
 		for(int k=0; k < Generate.row4.length;k++)
 		{
 			if(Generate.row1[k] == 7)
@@ -115,7 +115,7 @@ public class terraingen extends java.applet.Applet
 
 		// ROW 2
 		x = 0;
-		y = 125;
+		y = 75;
 		for(int k=0; k < Generate.row4.length;k++)
 		{
 			if(Generate.row2[k] == 7)
@@ -136,8 +136,8 @@ public class terraingen extends java.applet.Applet
 		}
 
 		// ROW 3
-		int x = 0;
-		int y = 125;
+		x = 0;
+		y = 100;
 		for(int k=0; k < Generate.row4.length;k++)
 		{
 			if(Generate.row3[k] == 7)
@@ -158,8 +158,8 @@ public class terraingen extends java.applet.Applet
 		}
 
 		// ROW 4
-		int x = 0;
-		int y = 125;
+		x = 0;
+		y = 125;
 		for(int k=0; k < Generate.row4.length;k++)
 		{
 			if(Generate.row4[k] == 7)
@@ -192,6 +192,11 @@ public class terraingen extends java.applet.Applet
 			if(Generate.row5[k] == 9)
 			{
 				g.drawImage(snowdirt,x,y,this);
+			}
+
+			if(Generate.row5[k] == 1)
+			{
+				g.drawImage(dirt,x,y,this);
 			}
 			x += 25;
 		}
