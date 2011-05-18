@@ -55,6 +55,7 @@ public class Generate
 	private static int rand[] = new int[2];
 	public static boolean drawLeftHill = false;
 	public static boolean drawRightHill = false;
+	public static boolean snowing = false;
 
 	public static void getSeed()
 	{
@@ -138,12 +139,27 @@ public class Generate
 	{
 		if(drawLeftHill)
 		{
-			row4[1] = 4;
+			if(snowing)
+			{
+
+			}
+			else
+			{
+				row4[1] = 4;
+			}
+
 		}
 
 		if(drawRightHill)
 		{
-			row4[5] = 4;
+			if(snowing)
+			{
+
+			}
+			else
+			{
+				row4[1] = 4;
+			}
 		}
 	}
 	public static void assignRandom()
@@ -158,6 +174,7 @@ public class Generate
 			if(rand[0] == 1)
 			{
 				Arrays.fill(row5,9);
+				snowing = true;
 			}
 
 			// Hill?
@@ -564,6 +581,7 @@ public class Generate
 			if(willSnow == 1)
 			{
 				Arrays.fill(row5,9);
+				snowing = true;
 			}
 
 			// Hill?

@@ -89,26 +89,92 @@ public class terraingen extends java.applet.Applet
 	public void drawGround(Graphics g)
 	{
 		// ROW 0
+		// This is blank because nothing will be drawn up here...
 
 		// ROW 1
+		int x = 0;
+		int y = 125;
+		for(int k=0; k < Generate.row4.length;k++)
+		{
+			if(Generate.row1[k] == 7)
+			{
+				g.drawImage(topdirt,x,y,this);
+			}
+
+			if(Generate.row1[k] == 9)
+			{
+				g.drawImage(snowdirt,x,y,this);
+			}
+
+			if(Generate.row1[k] == 1)
+			{
+				g.drawImage(dirt,x,y,this);
+			}
+			x += 25;
+		}
 
 		// ROW 2
+		x = 0;
+		y = 125;
+		for(int k=0; k < Generate.row4.length;k++)
+		{
+			if(Generate.row2[k] == 7)
+			{
+				g.drawImage(topdirt,x,y,this);
+			}
+
+			if(Generate.row2[k] == 9)
+			{
+				g.drawImage(snowdirt,x,y,this);
+			}
+
+			if(Generate.row2[k] == 1)
+			{
+				g.drawImage(dirt,x,y,this);
+			}
+			x += 25;
+		}
 
 		// ROW 3
+		int x = 0;
+		int y = 125;
+		for(int k=0; k < Generate.row4.length;k++)
+		{
+			if(Generate.row3[k] == 7)
+			{
+				g.drawImage(topdirt,x,y,this);
+			}
+
+			if(Generate.row3[k] == 9)
+			{
+				g.drawImage(snowdirt,x,y,this);
+			}
+
+			if(Generate.row3[k] == 1)
+			{
+				g.drawImage(dirt,x,y,this);
+			}
+			x += 25;
+		}
 
 		// ROW 4
 		int x = 0;
 		int y = 125;
 		for(int k=0; k < Generate.row4.length;k++)
 		{
-			if(Generate.row4[k] == 4)
+			if(Generate.row4[k] == 7)
 			{
-				g.drawImage(iron,x,y,this);
+				g.drawImage(topdirt,x,y,this);
 			}
 
 			if(Generate.row4[k] == 9)
 			{
 				g.drawImage(snowdirt,x,y,this);
+			}
+
+			if(Generate.row4[k] == 1)
+			{
+				g.drawImage(dirt,x,y,this);
 			}
 			x += 25;
 		}
@@ -456,7 +522,7 @@ public class terraingen extends java.applet.Applet
 		Expo.setFont(g,"Arial",Font.BOLD,36);
 		Expo.drawString(g,"TerrainGen",100,200);
 		Expo.setFont(g,"Arial",Font.PLAIN,12);
-		g.drawString("v. 1.0",300,200);
+		g.drawString("v. 1.1",300,200);
 	}
 
 	public void drawCredits(Graphics g)
