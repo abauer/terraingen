@@ -615,13 +615,11 @@ public class Generate
 			int doHill = hill.nextInt(10);
 			if(doHill < 4)
 			{
-				// Draw LEFT hill
 				drawLeftHill = true;
 			}
 
 			if(doHill > 3 && doHill < 7)
 			{
-				// Draw RIGHT hill
 				drawRightHill = true;
 			}
 
