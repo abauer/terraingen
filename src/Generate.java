@@ -141,7 +141,19 @@ public class Generate
 		{
 			if(snowing)
 			{
+				// change topdirt to dirt
+				row5[1] = 1;
+				row5[2] = 1;
+				row5[3] = 1;
+				row5[4] = 1;
+				row5[5] = 1;
 
+				// draw hill
+				row4[1] = 9;
+				row4[2] = 9;
+				row4[3] = 9;
+				row4[4] = 9;
+				row4[5] = 9;
 			}
 			else
 			{
@@ -171,7 +183,7 @@ public class Generate
 			}
 			else
 			{
-				row4[1] = 4;
+
 			}
 		}
 	}
@@ -589,6 +601,7 @@ public class Generate
 			/////////////////////
 
 			// Snow?
+			snowing = false;
 			Random snow = new Random();
 			int willSnow = snow.nextInt(3); // 1/3 chance of snow
 			if(willSnow == 1)
