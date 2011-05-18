@@ -145,7 +145,20 @@ public class Generate
 			}
 			else
 			{
-				row4[1] = 4;
+				// change topdirt to dirt
+				row5[1] = 1;
+				row5[2] = 1;
+				row5[3] = 1;
+				row5[4] = 1;
+				row5[5] = 1;
+
+				// draw hill
+				row4[1] = 7;
+				row4[2] = 7;
+				row4[3] = 7;
+				row4[4] = 7;
+				row4[5] = 7;
+
 			}
 
 		}
