@@ -59,6 +59,7 @@ public class terraingen extends java.applet.Applet
 					g.drawString("Debug: Ignoring mouse click(s). Already prompted for seed.",20,20);
 					Generate.setConstants();
 					Generate.assignRandom();
+					Generate.checkHill();
 					drawSky(g);
 					drawGround(g);
 					drawRock(g);
@@ -87,9 +88,34 @@ public class terraingen extends java.applet.Applet
 
 	public void drawGround(Graphics g)
 	{
-		// ROW 5
+		// ROW 0
+
+		// ROW 1
+
+		// ROW 2
+
+		// ROW 3
+
+		// ROW 4
 		int x = 0;
-		int y = 150;
+		int y = 125;
+		for(int k=0; k < Generate.row4.length;k++)
+		{
+			if(Generate.row4[k] == 4)
+			{
+				g.drawImage(iron,x,y,this);
+			}
+
+			if(Generate.row4[k] == 9)
+			{
+				g.drawImage(snowdirt,x,y,this);
+			}
+			x += 25;
+		}
+
+		// ROW 5
+		x = 0;
+		y = 150;
 		for(int k=0; k < Generate.row5.length;k++)
 		{
 			if(Generate.row5[k] == 7)

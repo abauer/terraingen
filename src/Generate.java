@@ -52,20 +52,9 @@ public class Generate
 	public static int row23[] = new int[40];
 	public static int row24[] = new int[40];
 	public static int row25[] = new int[40];
-	private static int rand[] = new int[1];
-	/*
-	// Rock level seeds
-	Random random1 = new Random(seed);
-	Random random2 = new Random(seed);
-	Random random3 = new Random(seed);
-	Random random4 = new Random(seed);
-
-	// for use with rand[1] through rand[4] on lower rock level
-	Random random5 = new Random(seed);
-
-	// Intermediate level seeds
-	Random random6 = new Random(seed);
-	Random random7 = new Random(seed); */
+	private static int rand[] = new int[2];
+	public static boolean drawLeftHill = false;
+	public static boolean drawRightHill = false;
 
 	public static void getSeed()
 	{
@@ -92,12 +81,15 @@ public class Generate
 
 	private static void makeSeeds()
 	{
-		// Makes seeds from seeds
 		// See documentation (doc/)
 
 		// Snow seed
 		Random random0 = new Random(seed);
 		rand[0] = random0.nextInt(3);
+
+		// Hill seed
+		Random random1 = new Random(seed+1);
+		rand[1] = random1.nextInt(10);
 	}
 
 	public static void setConstants()
@@ -142,6 +134,18 @@ public class Generate
 		Arrays.fill(row23,2);
 	}
 
+	public static void checkHill()
+	{
+		if(drawLeftHill)
+		{
+			row4[1] = 4;
+		}
+
+		if(drawRightHill)
+		{
+			row4[5] = 4;
+		}
+	}
 	public static void assignRandom()
 	{
 		if(wantSeed.equals("true"))
@@ -149,9 +153,24 @@ public class Generate
 			/////////////////////
 			//////Top Layer//////
 			/////////////////////
+
+			// Snow?
 			if(rand[0] == 1)
 			{
 				Arrays.fill(row5,9);
+			}
+
+			// Hill?
+			if(rand[1] < 4)
+			{
+				// Draw LEFT hill
+				drawLeftHill = true;
+			}
+
+			if(rand[1] > 3 && rand[1] < 7)
+			{
+				// Draw RIGHT hill
+				drawRightHill = true;
 			}
 
 			/////////////////////
@@ -538,11 +557,28 @@ public class Generate
 			/////////////////////
 			//////Top Layer//////
 			/////////////////////
+
+			// Snow?
 			Random snow = new Random();
 			int willSnow = snow.nextInt(3); // 1/3 chance of snow
 			if(willSnow == 1)
 			{
 				Arrays.fill(row5,9);
+			}
+
+			// Hill?
+			Random hill = new Random();
+			int doHill = hill.nextInt(10);
+			if(doHill < 4)
+			{
+				// Draw LEFT hill
+				drawLeftHill = true;
+			}
+
+			if(doHill > 3 && doHill < 7)
+			{
+				// Draw RIGHT hill
+				drawRightHill = true;
 			}
 
 			/////////////////////
