@@ -113,10 +113,16 @@ public class terraingen extends java.applet.Applet
 		if(night)
 		{
 			Expo.setBackground(g,Expo.black);
+			// Draw stars and moon
+			Expo.setColor(g,Expo.white);
+			Expo.fillRectangle(g,450,10,550,110);
 		}
 		else
 		{
 			Expo.setBackground(g,Expo.lightBlue);
+			// draw sun
+			Expo.setColor(g,255,255,204);
+			Expo.fillRectangle(g,450,10,550,110);
 		}
 	}
 
