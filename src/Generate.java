@@ -55,10 +55,18 @@ public class Generate
 	private static int rand[] = new int[2];
 	public static boolean drawLeftHill = false;
 	public static boolean drawRightHill = false;
+	public static boolean drawMiddleHill = false;
 	public static boolean snowing = false;
 
 	public static void getSeed()
 	{
+		// Make sure random events don't get "stuck"
+		drawLeftHill = false;
+		drawMiddleHill = false;
+		drawRightHill = false;
+		snowing = false;
+		////////////////////////////////////////////
+
 		wantSeed = Expo.enterStringGUI("[true/false] Use seed?");
 		if(wantSeed.equals("null"))
 		{
@@ -90,7 +98,7 @@ public class Generate
 
 		// Hill seed
 		Random random1 = new Random(seed+1);
-		rand[1] = random1.nextInt(10);
+		rand[1] = random1.nextInt(15);
 	}
 
 	public static void setConstants()
@@ -221,7 +229,66 @@ public class Generate
 				row2[36] = 7;
 			}
 		}
+
+		if(drawMiddleHill)
+		{
+			if(snowing)
+			{
+				row5[17] = 1;
+				row5[18] = 1;
+				row5[19] = 1;
+				row5[20] = 1;
+				row5[21] = 1;
+				row5[22] = 1;
+				row5[23] = 1;
+				row5[24] = 1;
+				row4[17] = 9;
+				row4[18] = 1;
+				row4[19] = 1;
+				row4[20] = 9;
+				row4[21] = 1;
+				row4[22] = 1;
+				row4[23] = 1;
+				row4[24] = 9;
+				row3[18] = 9;
+				row3[19] = 1;
+				row3[21] = 9;
+				row3[22] = 1;
+				row3[23] = 1;
+				row2[19] = 9;
+				row2[22] = 9;
+				row2[23] = 9;
+			}
+			else
+			{
+				row5[17] = 1;
+				row5[18] = 1;
+				row5[17] = 1;
+				row5[20] = 1;
+				row5[21] = 1;
+				row5[22] = 1;
+				row5[23] = 1;
+				row5[24] = 1;
+				row4[17] = 7;
+				row4[18] = 1;
+				row4[17] = 1;
+				row4[20] = 7;
+				row4[21] = 1;
+				row4[22] = 1;
+				row4[23] = 1;
+				row4[24] = 7;
+				row3[18] = 7;
+				row3[17] = 1;
+				row3[21] = 7;
+				row3[22] = 1;
+				row3[23] = 1;
+				row2[17] = 7;
+				row2[22] = 7;
+				row2[23] = 7;
+			}
+		}
 	}
+
 	public static void assignRandom()
 	{
 		if(wantSeed.equals("true"))
@@ -240,14 +307,17 @@ public class Generate
 			// Hill?
 			if(rand[1] < 4)
 			{
-				// Draw LEFT hill
 				drawLeftHill = true;
 			}
 
 			if(rand[1] > 3 && rand[1] < 7)
 			{
-				// Draw RIGHT hill
 				drawRightHill = true;
+			}
+
+			if(rand[1] > 10)
+			{
+				drawMiddleHill = true;
 			}
 
 			/////////////////////
@@ -647,7 +717,7 @@ public class Generate
 
 			// Hill?
 			Random hill = new Random();
-			int doHill = hill.nextInt(10);
+			int doHill = hill.nextInt(20);
 			if(doHill < 4)
 			{
 				drawLeftHill = true;
@@ -656,6 +726,11 @@ public class Generate
 			if(doHill > 3 && doHill < 7)
 			{
 				drawRightHill = true;
+			}
+
+			if(doHill > 10)
+			{
+				drawMiddleHill = true;
 			}
 
 			/////////////////////
