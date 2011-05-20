@@ -66,6 +66,12 @@ public class terraingen extends java.applet.Applet
 					drawBedrock(g);
 					drawDone(); // deprecated
 				}
+
+				if (numClicks == 1000)
+				{
+					numClicks = 0;
+					repaint();
+				}
 			}
 		}
 
@@ -74,7 +80,7 @@ public class terraingen extends java.applet.Applet
 	public boolean mouseDown(Event e, int x, int y)
 	{
 		numClicks++;
-		if (numClicks <= 1)
+		if (numClicks <= 1 || numClicks == 1000)
 		{
 			repaint();
 		}
@@ -519,7 +525,6 @@ public class terraingen extends java.applet.Applet
 			}
 			x += 25;
 		}
-
 	}
 
 	public void drawMain(Graphics g)
@@ -544,7 +549,7 @@ public class terraingen extends java.applet.Applet
 		Expo.setFont(g,"Arial",Font.PLAIN,12);
 		g.drawString("1) Click the screen to begin",600,375);
 		g.drawString("2) Answer prompts",600,400);
-		g.drawString("3) Reset program to regenerate",600,425);
+		g.drawString("3) Click again to reset",600,425);
 		Expo.setFont(g,"Arial",Font.BOLD,16);
 		g.drawString("Interesting Seeds",600,450);
 		Expo.setFont(g,"Arial",Font.PLAIN,12);
