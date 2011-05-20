@@ -16,6 +16,8 @@ public class terraingen extends java.applet.Applet
 {
 	Image dirt,topdirt,rock,diamond,iron,redstone,bedrock,coal,snowdirt;
 	public static int numClicks;
+	public boolean night = false;
+	public boolean regen = true;
 
 	public void init()
 	{
@@ -51,20 +53,25 @@ public class terraingen extends java.applet.Applet
 				drawMain(g);
 				drawDirections(g);
 				drawCredits(g);
+				regen = true;
 			}
 			else
 			{
 				if (numClicks == 999)
 				{
 					g.drawString("Debug: Ignoring mouse click(s). Already prompted for seed.",20,20);
-					Generate.setConstants();
-					Generate.assignRandom();
-					Generate.checkHill();
+					if(regen == true)
+					{
+						Generate.setConstants();
+						Generate.assignRandom();
+						Generate.checkHill();
+					}
 					drawSky(g);
 					drawGround(g);
 					drawRock(g);
 					drawBedrock(g);
 					drawDone(); // deprecated
+					regen = false;
 				}
 
 				if (numClicks == 1000)
@@ -87,9 +94,31 @@ public class terraingen extends java.applet.Applet
 		return true;
 	}
 
+	public boolean mouseExit(Event e, int x, int y)
+	{
+		night = true;
+		repaint();
+		return true;
+	}
+
+	public boolean mouseEnter(Event e, int x, int y)
+	{
+		night = false;
+		repaint();
+		return true;
+	}
+
+
 	public void drawSky(Graphics g)
 	{
-		Expo.setBackground(g,Expo.lightBlue);
+		if(night)
+		{
+			Expo.setBackground(g,Expo.black);
+		}
+		else
+		{
+			Expo.setBackground(g,Expo.lightBlue);
+		}
 	}
 
 	public void drawGround(Graphics g)
