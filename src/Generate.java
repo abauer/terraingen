@@ -166,10 +166,18 @@ public class Generate
 
 				// draw hill
 				row4[1] = 7;
-				row4[2] = 7;
-				row4[3] = 7;
-				row4[4] = 7;
-				row4[5] = 7;
+				row4[2] = 1;
+				row4[3] = 1;
+				row4[4] = 1;
+				row4[5] = 1;
+
+				row3[2] = 7;
+				row3[3] = 1;
+				row3[4] = 1;
+				row3[5] = 7;
+
+				row2[3] = 7;
+				row2[4] = 7;
 
 			}
 
