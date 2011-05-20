@@ -70,7 +70,6 @@ public class terraingen extends java.applet.Applet
 					drawGround(g);
 					drawRock(g);
 					drawBedrock(g);
-					drawDone(); // deprecated
 					regen = false;
 				}
 
@@ -585,11 +584,4 @@ public class terraingen extends java.applet.Applet
 		g.drawString("2 - snow without hills",600,475);
 		g.drawString("More to be added...",600,500);
 	}
-
-	public void drawDone()
-	{
-		// Expo.displayGUI("Generation complete!");
-		// Removed 5/12/11 because it was annoying...
-	}
 }
-
