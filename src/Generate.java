@@ -147,38 +147,41 @@ public class Generate
 				row5[3] = 1;
 				row5[4] = 1;
 				row5[5] = 1;
-
-				// draw hill
-				row4[1] = 9;
-				row4[2] = 9;
-				row4[3] = 9;
-				row4[4] = 9;
-				row4[5] = 9;
-			}
-			else
-			{
-				// change topdirt to dirt
 				row5[1] = 1;
 				row5[2] = 1;
 				row5[3] = 1;
 				row5[4] = 1;
 				row5[5] = 1;
-
-				// draw hill
+				row4[1] = 9;
+				row4[2] = 1;
+				row4[3] = 1;
+				row4[4] = 1;
+				row4[5] = 1;
+				row3[2] = 9;
+				row3[3] = 1;
+				row3[4] = 1;
+				row3[5] = 9;
+				row2[3] = 9;
+				row2[4] = 9;
+			}
+			else
+			{
+				row5[1] = 1;
+				row5[2] = 1;
+				row5[3] = 1;
+				row5[4] = 1;
+				row5[5] = 1;
 				row4[1] = 7;
 				row4[2] = 1;
 				row4[3] = 1;
 				row4[4] = 1;
 				row4[5] = 1;
-
 				row3[2] = 7;
 				row3[3] = 1;
 				row3[4] = 1;
 				row3[5] = 7;
-
 				row2[3] = 7;
 				row2[4] = 7;
-
 			}
 
 		}
