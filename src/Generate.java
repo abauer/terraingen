@@ -141,12 +141,6 @@ public class Generate
 		{
 			if(snowing)
 			{
-				// change topdirt to dirt
-				row5[1] = 1;
-				row5[2] = 1;
-				row5[3] = 1;
-				row5[4] = 1;
-				row5[5] = 1;
 				row5[1] = 1;
 				row5[2] = 1;
 				row5[3] = 1;
@@ -190,11 +184,41 @@ public class Generate
 		{
 			if(snowing)
 			{
-
+				row5[33] = 1;
+				row5[34] = 1;
+				row5[35] = 1;
+				row5[36] = 1;
+				row5[37] = 1;
+				row4[33] = 9;
+				row4[34] = 1;
+				row4[35] = 1;
+				row4[36] = 1;
+				row4[37] = 1;
+				row3[34] = 9;
+				row3[35] = 1;
+				row3[36] = 1;
+				row3[37] = 9;
+				row2[35] = 9;
+				row2[36] = 9;
 			}
 			else
 			{
-
+				row5[33] = 1;
+				row5[34] = 1;
+				row5[35] = 1;
+				row5[36] = 1;
+				row5[37] = 1;
+				row4[33] = 7;
+				row4[34] = 1;
+				row4[35] = 1;
+				row4[36] = 1;
+				row4[37] = 1;
+				row3[34] = 7;
+				row3[35] = 1;
+				row3[36] = 1;
+				row3[37] = 7;
+				row2[35] = 7;
+				row2[36] = 7;
 			}
 		}
 	}
