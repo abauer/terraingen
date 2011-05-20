@@ -578,7 +578,7 @@ public class terraingen extends java.applet.Applet
 		Expo.setFont(g,"Arial",Font.PLAIN,12);
 		g.drawString("1) Click the screen to begin",600,375);
 		g.drawString("2) Answer prompts",600,400);
-		g.drawString("3) Click again to reset",600,425);
+		g.drawString("3) Click again to reset - move mouse outsite applet to change time",600,425);
 		Expo.setFont(g,"Arial",Font.BOLD,16);
 		g.drawString("Interesting Seeds",600,450);
 		Expo.setFont(g,"Arial",Font.PLAIN,12);
