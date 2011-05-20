@@ -66,7 +66,6 @@ public class terraingen extends java.applet.Applet
 						Generate.assignRandom();
 						Generate.checkHill();
 					}
-					Generate.checkHill();
 					drawSky(g);
 					drawGround(g);
 					drawRock(g);
