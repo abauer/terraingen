@@ -1,5 +1,5 @@
 // Generate.java
-// Part of TerrainGen 1.1
+// Part of TerrainGen 1.2
 //
 // Generates and assigns blocks' data values
 

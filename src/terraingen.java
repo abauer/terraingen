@@ -1,6 +1,6 @@
 ////////////////////////////////////////
 //                                    //
-//          TerrainGen 1.1            //
+//          TerrainGen 1.2            //
 //                                    //
 ////////////////////////////////////////
 //                                    //
@@ -39,10 +39,6 @@ public class terraingen extends java.applet.Applet
 			g.drawString("Debug: Prompting for seed...",20,20);
 			numClicks++;
 			Generate.getSeed();
-		//	if (Generate.seed == 0)
-		//	{
-		//		numClicks = 1;
-		//	}
 			repaint();
 		}
 		else
@@ -566,7 +562,7 @@ public class terraingen extends java.applet.Applet
 		Expo.setFont(g,"Arial",Font.BOLD,36);
 		Expo.drawString(g,"TerrainGen",100,200);
 		Expo.setFont(g,"Arial",Font.PLAIN,12);
-		g.drawString("v. 1.1",300,200);
+		g.drawString("v. 1.2",300,200);
 	}
 
 	public void drawCredits(Graphics g)
