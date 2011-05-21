@@ -130,6 +130,10 @@ public class terraingen extends java.applet.Applet
 			Expo.fillRectangle(g,600,70,605,75);
 			Expo.fillRectangle(g,250,30,255,35);
 			Expo.fillRectangle(g,875,15,880,20);
+
+			// Debug text
+			Expo.setColor(g,Expo.white);
+			g.drawString("Debug: Render complete",20,20);
 		}
 		else
 		{
@@ -162,6 +166,10 @@ public class terraingen extends java.applet.Applet
 				Expo.fillRectangle(g,100,50,200,75);
 				Expo.fillRectangle(g,175,40,200,75);
 			}
+
+			// Debug text
+			Expo.setColor(g,Expo.black);
+			g.drawString("Debug: Render complete",20,20);
 		}
 	}
 
