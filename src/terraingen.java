@@ -132,8 +132,16 @@ public class terraingen extends java.applet.Applet
 			Expo.fillRectangle(g,875,15,880,20);
 
 			// Debug text
-			Expo.setColor(g,Expo.white);
-			g.drawString("Debug: Render complete",20,20);
+			if(Generate.wantSeed.equals("true"))
+			{
+				Expo.setColor(g,Expo.white);
+				g.drawString("Debug: Render complete (Seed: " + Generate.seed + ")",20,20);
+			}
+			if(Generate.wantSeed.equals("false"))
+			{
+				Expo.setColor(g,Expo.white);
+				g.drawString("Debug: Render complete",20,20);
+			}
 		}
 		else
 		{
@@ -168,8 +176,16 @@ public class terraingen extends java.applet.Applet
 			}
 
 			// Debug text
-			Expo.setColor(g,Expo.black);
-			g.drawString("Debug: Render complete",20,20);
+			if(Generate.wantSeed.equals("true"))
+			{
+				Expo.setColor(g,Expo.black);
+				g.drawString("Debug: Render complete (Seed: " + Generate.seed + ")",20,20);
+			}
+			if(Generate.wantSeed.equals("false"))
+			{
+				Expo.setColor(g,Expo.black);
+				g.drawString("Debug: Render complete",20,20);
+			}
 		}
 	}
 
