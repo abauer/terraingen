@@ -261,6 +261,7 @@ public class Generate
 			}
 			else
 			{
+				row5[16] = 1;
 				row5[17] = 1;
 				row5[18] = 1;
 				row5[17] = 1;
@@ -269,6 +270,7 @@ public class Generate
 				row5[22] = 1;
 				row5[23] = 1;
 				row5[24] = 1;
+				row4[16] = 7;
 				row4[17] = 7;
 				row4[18] = 1;
 				row4[17] = 1;
