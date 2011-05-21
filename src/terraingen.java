@@ -109,9 +109,18 @@ public class terraingen extends java.applet.Applet
 		if(night)
 		{
 			Expo.setBackground(g,Expo.black);
-			// Draw stars and moon
+			// Moon
 			Expo.setColor(g,Expo.white);
 			Expo.fillRectangle(g,450,10,550,110);
+			Expo.setColor(g,Expo.lightGrey);
+			Expo.fillRectangle(g,455,15,460,75);
+			Expo.fillRectangle(g,525,15,535,25);
+			Expo.fillRectangle(g,480,30,490,40);
+			Expo.fillRectangle(g,510,90,520,100);
+			Expo.fillRectangle(g,520,50,530,60);
+			Expo.fillRectangle(g,475,80,485,90);
+
+			// Stars
 		}
 		else
 		{
