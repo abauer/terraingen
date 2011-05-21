@@ -121,11 +121,20 @@ public class terraingen extends java.applet.Applet
 			Expo.fillRectangle(g,475,80,485,90);
 
 			// Stars
+			Expo.setColor(g,Expo.white);
+			Expo.fillRectangle(g,10,5,15,10);
+			Expo.fillRectangle(g,750,30,755,35);
+			Expo.fillRectangle(g,400,100,405,105);
+			Expo.fillRectangle(g,900,120,905,125);
+			Expo.fillRectangle(g,100,50,105,55);
+			Expo.fillRectangle(g,600,70,605,75);
+			Expo.fillRectangle(g,250,30,255,35);
+			Expo.fillRectangle(g,875,15,880,20);
 		}
 		else
 		{
 			Expo.setBackground(g,Expo.lightBlue);
-			// draw sun
+			// Sun
 			Expo.setColor(g,255,255,204);
 			Expo.fillRectangle(g,450,10,550,110);
 		}
