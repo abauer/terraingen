@@ -22,6 +22,7 @@
 import java.util.Arrays;
 import java.util.Random;
 import javax.swing.*;
+import java.io.*;
 
 public class Generate
 {
@@ -59,7 +60,7 @@ public class Generate
 	public static boolean drawMiddleHill = false;
 	public static boolean snowing = false;
 
-	public static void getSeed()
+	public static void getSeed() throws IOException
 	{
 		// Make sure random events don't get "stuck"
 		drawLeftHill = false;
@@ -88,6 +89,33 @@ public class Generate
 		{
 			if(wantSeed.equals("true"))
 			{
+				// Read config.seed file and store values to memory
+				// File needs to be in the same directory as the program... see file for instructions
+				// Edit the file in Notepad, Notepad++, or a similar program
+				boolean ignore = false;
+				String inString = "#";
+				ExpoInFile seedconfig = new ExpoInFile("config.seed");
+
+				while(!ignore)
+				{
+					if(inString.indexOf("#") != -1) // determine which lines are commented
+					{
+						inString = seedconfig.readString();
+						System.out.println("IGNORING");
+						System.out.println(inString);
+					}
+					else
+					{
+						ignore = true;
+					}
+				}
+
+
+				System.out.println(inString);
+				seedconfig.closeFile();
+
+
+				// Display GUI
 				JDialog.setDefaultLookAndFeelDecorated(true);
     			Object[] selectionValues = { "Custom Seed", "1 - Middle hill, no snow", "2 - Middle hill, snow", "3 - Left hill, no snow", "12324 - Flat, snow"};
     			String initialSelection = "Custom Seed";

@@ -1,0 +1,31 @@
+# COMMENTED LINES BEGIN WITH THE POUND SYMBOL (#)
+####################################################
+###        TerrainGen 1.2 - config.seed          ###
+####################################################
+#
+# THE PROGRAM WILL ONLY READ THE FIRST 5 SEEDS!
+#
+# Template------------------------------------------
+# Note that text in parenthesies are "documentation", assume comment symbols are absent
+# Indentation/spacing/extra lines between seeds will break the file!
+####################################################
+# 1 - this seed is cool (text to be diplayed in the dropdown... format is <SEED> - <DESCRIPTION>)
+# 1 (seed to be assigned... needed for the backend)
+# END (marks the end of a seed... needs to be in all caps)
+####################################################
+1 - Middle hill, no snow
+1
+END
+2 - Middle hill, snow
+2
+END
+3 - Left hill, no snow
+3
+END
+12324 - Flat, snow
+12324
+END
+123456789 - Random seed
+123456789
+END
+# END OF FILE
