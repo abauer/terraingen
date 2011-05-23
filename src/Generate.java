@@ -93,16 +93,38 @@ public class Generate
 				// File needs to be in the same directory as the program... see file for instructions
 				// Edit the file in Notepad, Notepad++, or a similar program
 				boolean ignore = false;
-				String inString = "#";
+				String firstSeedName = "#";
+				String firstSeed = "0";
+				String secondSeedName = "#";
+				String secondSeed = "0";
+				String thirdSeedName = "#";
+				String thirdSeed = "0";
+				String fourthSeedName = "#";
+				String fourthSeed = "0";
+				String fifthSeedName = "#";
+				String fifthSeed = "0";
+
 				ExpoInFile seedconfig = new ExpoInFile("config.seed");
 
 				while(!ignore)
 				{
-					if(inString.indexOf("#") != -1) // determine which lines are commented
+					firstSeedName = seedconfig.readString();
+					if(firstSeedName.indexOf("#") != -1) // determine which lines are commented
 					{
-						inString = seedconfig.readString();
-						System.out.println("IGNORING");
-						System.out.println(inString);
+						// Ignore the line
+					}
+					else
+					{
+						ignore = true;
+					}
+				}
+				ignore = false;
+				while(!ignore)
+				{
+					firstSeed = seedconfig.readString();
+					if(firstSeed.indexOf("#") != -1) // determine which lines are commented
+					{
+						// Ignore the line
 					}
 					else
 					{
@@ -111,9 +133,7 @@ public class Generate
 				}
 
 
-				System.out.println(inString);
 				seedconfig.closeFile();
-
 
 				// Display GUI
 				JDialog.setDefaultLookAndFeelDecorated(true);
