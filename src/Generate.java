@@ -89,7 +89,7 @@ public class Generate
 			if(wantSeed.equals("true"))
 			{
 				JDialog.setDefaultLookAndFeelDecorated(true);
-    			Object[] selectionValues = { "Custom Seed", "<SEED>", "<SEED 2>" };
+    			Object[] selectionValues = { "Custom Seed", "1 - Middle hill, no snow", "2 - Middle hill, snow", "3 - Left hill, no snow", "12324 - Flat, snow"};
     			String initialSelection = "Custom Seed";
     			Object selection = JOptionPane.showInputDialog(null, "What seed would you like to use?",
         		"Select Seed", JOptionPane.QUESTION_MESSAGE, null, selectionValues, initialSelection);
@@ -98,6 +98,34 @@ public class Generate
     			{
     				seed = Expo.enterIntGUI("Enter Seed");
 					Generate.makeSeeds();
+					terraingen.numClicks = 999;
+    			}
+
+    			if(selection == "1 - Middle hill, no snow")
+    			{
+    				seed = 1;
+    				Generate.makeSeeds();
+					terraingen.numClicks = 999;
+    			}
+
+    			if(selection == "2 - Middle hill, snow")
+    			{
+    				seed = 2;
+    				Generate.makeSeeds();
+					terraingen.numClicks = 999;
+    			}
+
+    			if(selection == "3 - Left hill, no snow")
+    			{
+    				seed = 3;
+    				Generate.makeSeeds();
+					terraingen.numClicks = 999;
+    			}
+
+    			if(selection == "12324 - Flat, snow")
+    			{
+    				seed = 12324;
+    				Generate.makeSeeds();
 					terraingen.numClicks = 999;
     			}
 
