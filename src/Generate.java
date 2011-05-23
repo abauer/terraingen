@@ -21,6 +21,7 @@
 
 import java.util.Arrays;
 import java.util.Random;
+import javax.swing.*;
 
 public class Generate
 {
@@ -66,20 +67,48 @@ public class Generate
 		drawRightHill = false;
 		snowing = false;
 		////////////////////////////////////////////
+		JDialog.setDefaultLookAndFeelDecorated(true);
+    	int response = JOptionPane.showConfirmDialog(null, "Do you want to use a seed?", "Seed",
+        JOptionPane.YES_NO_OPTION, JOptionPane.QUESTION_MESSAGE);
+    	if (response == JOptionPane.NO_OPTION) {
+      		wantSeed = "false";
+    	} else if (response == JOptionPane.YES_OPTION) {
+      		wantSeed = "true";
+    	} else if (response == JOptionPane.CLOSED_OPTION) {
+      		wantSeed = "null";
+    	}
 
-		wantSeed = Expo.enterStringGUI("[true/false] Use seed?");
-		if(wantSeed.equals("null"))
+    	if(wantSeed.equals("null"))
 		{
-			seed = Expo.enterIntGUI("Enter Seed");
-			Generate.makeSeeds();
+			JFrame parent = new JFrame();
+    		String multiLineMsg[] = { "You did something wrong. Maybe you went the wrong way?", "You need to reset the applet viewer or web browser."} ;
+    		JOptionPane.showMessageDialog(parent, multiLineMsg);
 		}
 		else
 		{
 			if(wantSeed.equals("true"))
 			{
-				seed = Expo.enterIntGUI("Enter Seed");
-				Generate.makeSeeds();
-				terraingen.numClicks = 999;
+				JDialog.setDefaultLookAndFeelDecorated(true);
+    			Object[] selectionValues = { "Custom Seed", "<SEED>", "<SEED 2>" };
+    			String initialSelection = "Custom Seed";
+    			Object selection = JOptionPane.showInputDialog(null, "What seed would you like to use?",
+        		"Select Seed", JOptionPane.QUESTION_MESSAGE, null, selectionValues, initialSelection);
+
+    			if (selection == "Custom Seed")
+    			{
+    				seed = Expo.enterIntGUI("Enter Seed");
+					Generate.makeSeeds();
+					terraingen.numClicks = 999;
+    			}
+
+    			if (selection == null)
+    			{
+    				JFrame parent = new JFrame();
+    				String multiLineMsg[] = { "You did something wrong. Maybe you went the wrong way?", "You need to reset the applet viewer or web browser."} ;
+    				JOptionPane.showMessageDialog(parent, multiLineMsg);
+    			}
+
+
 			}
 			if(wantSeed.equals("false"))
 			{
