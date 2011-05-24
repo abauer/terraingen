@@ -1,9 +1,12 @@
 # COMMENTED LINES BEGIN WITH THE POUND SYMBOL (#)
+#
+# Any line with # in the line will be ignored!
+#
 ####################################################
 ###        TerrainGen 1.2 - config.seed          ###
 ####################################################
 #
-# THE PROGRAM WILL ONLY READ THE FIRST 5 SEEDS!
+# The program will only read the first five definitions. Minimum is 5, maxiumum is 5.
 #
 # Template------------------------------------------
 # Note that text in parenthesies are "documentation", assume comment symbols are absent
@@ -11,21 +14,15 @@
 ####################################################
 # 1 - this seed is cool (text to be diplayed in the dropdown... format is <SEED> - <DESCRIPTION>)
 # 1 (seed to be assigned... needed for the backend)
-# END (marks the end of a seed... needs to be in all caps)
 ####################################################
-1 - Middle hill, no snow
+You can customize these presets.
 1
-END
-2 - Middle hill, snow
-2
-END
-3 - Left hill, no snow
-3
-END
-12324 - Flat, snow
-12324
-END
-123456789 - Random seed
-123456789
-END
+Edit config.seed in Notepad.
+1
+Any other text editor work.
+1
+These presets are all set to 1
+1
+Hello World
+1
 # END OF FILE

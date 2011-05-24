@@ -131,13 +131,124 @@ public class Generate
 						ignore = true;
 					}
 				}
+				ignore = false;
+				while(!ignore)
+				{
+					secondSeedName = seedconfig.readString();
+					if(secondSeedName.indexOf("#") != -1) // determine which lines are commented
+					{
+						// Ignore the line
+					}
+					else
+					{
+						ignore = true;
+					}
+				}
+				ignore = false;
+				while(!ignore)
+				{
+					secondSeed = seedconfig.readString();
+					if(secondSeed.indexOf("#") != -1) // determine which lines are commented
+					{
+						// Ignore the line
+					}
+					else
+					{
+						ignore = true;
+					}
+				}
+				ignore = false;
+				while(!ignore)
+				{
+					thirdSeedName = seedconfig.readString();
+					if(thirdSeedName.indexOf("#") != -1) // determine which lines are commented
+					{
+						// Ignore the line
+					}
+					else
+					{
+						ignore = true;
+					}
+				}
+				ignore = false;
+				while(!ignore)
+				{
+					thirdSeed = seedconfig.readString();
+					if(thirdSeed.indexOf("#") != -1) // determine which lines are commented
+					{
+						// Ignore the line
+					}
+					else
+					{
+						ignore = true;
+					}
+				}
+				ignore = false;
+				while(!ignore)
+				{
+					fourthSeedName = seedconfig.readString();
+					if(fourthSeedName.indexOf("#") != -1) // determine which lines are commented
+					{
+						// Ignore the line
+					}
+					else
+					{
+						ignore = true;
+					}
+				}
+				ignore = false;
+				while(!ignore)
+				{
+					fourthSeed = seedconfig.readString();
+					if(fourthSeed.indexOf("#") != -1) // determine which lines are commented
+					{
+						// Ignore the line
+					}
+					else
+					{
+						ignore = true;
+					}
+				}
+				ignore = false;
+				while(!ignore)
+				{
+					fifthSeedName = seedconfig.readString();
+					if(fifthSeedName.indexOf("#") != -1) // determine which lines are commented
+					{
+						// Ignore the line
+					}
+					else
+					{
+						ignore = true;
+					}
+				}
+				ignore = false;
+				while(!ignore)
+				{
+					fifthSeed = seedconfig.readString();
+					if(fifthSeed.indexOf("#") != -1) // determine which lines are commented
+					{
+						// Ignore the line
+					}
+					else
+					{
+						ignore = true;
+					}
+				}
+				ignore = false;
+				int firstSeedInt = Integer.parseInt(firstSeed);
+				int secondSeedInt = Integer.parseInt(secondSeed);
+				int thirdSeedInt = Integer.parseInt(thirdSeed);
+				int fourthSeedInt = Integer.parseInt(fourthSeed);
+				int fifthSeedInt = Integer.parseInt(fifthSeed);
 
+				// Convert seed values to int
 
 				seedconfig.closeFile();
 
 				// Display GUI
 				JDialog.setDefaultLookAndFeelDecorated(true);
-    			Object[] selectionValues = { "Custom Seed", "1 - Middle hill, no snow", "2 - Middle hill, snow", "3 - Left hill, no snow", "12324 - Flat, snow"};
+    			Object[] selectionValues = { "Custom Seed", firstSeedName, secondSeedName, thirdSeedName, fourthSeedName, fifthSeedName};
     			String initialSelection = "Custom Seed";
     			Object selection = JOptionPane.showInputDialog(null, "What seed would you like to use?",
         		"Select Seed", JOptionPane.QUESTION_MESSAGE, null, selectionValues, initialSelection);
@@ -149,32 +260,39 @@ public class Generate
 					terraingen.numClicks = 999;
     			}
 
-    			if(selection == "1 - Middle hill, no snow")
+    			if(selection == firstSeedName)
     			{
-    				seed = 1;
+    				seed = firstSeedInt;
     				Generate.makeSeeds();
 					terraingen.numClicks = 999;
     			}
 
-    			if(selection == "2 - Middle hill, snow")
+    			if(selection == secondSeedName)
     			{
-    				seed = 2;
+    				seed = secondSeedInt;
     				Generate.makeSeeds();
 					terraingen.numClicks = 999;
     			}
 
-    			if(selection == "3 - Left hill, no snow")
+    			if(selection == thirdSeedName)
     			{
-    				seed = 3;
+    				seed = thirdSeedInt;
     				Generate.makeSeeds();
 					terraingen.numClicks = 999;
     			}
 
-    			if(selection == "12324 - Flat, snow")
+    			if(selection == fourthSeedName)
     			{
-    				seed = 12324;
+    				seed = fourthSeedInt;
     				Generate.makeSeeds();
 					terraingen.numClicks = 999;
+    			}
+
+    			if(selection == fifthSeedName)
+    			{
+    				seed = fifthSeedInt;
+    				Generate.makeSeeds();
+    				terraingen.numClicks = 999;
     			}
 
     			if (selection == null)
