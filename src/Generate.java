@@ -1,7 +1,7 @@
 // Generate.java
 // Part of TerrainGen 1.2
 //
-// Generates and assigns blocks' data values
+// Does all the backend work
 
 /*
  * BLOCK TYPES:
@@ -22,7 +22,6 @@
 import java.util.Arrays;
 import java.util.Random;
 import javax.swing.*;
-import java.io.*;
 
 public class Generate
 {
@@ -60,7 +59,7 @@ public class Generate
 	public static boolean drawMiddleHill = false;
 	public static boolean snowing = false;
 
-	public static void getSeed() throws IOException
+	public static void getSeed()
 	{
 		// Make sure random events don't get "stuck"
 		drawLeftHill = false;
@@ -89,162 +88,22 @@ public class Generate
 		{
 			if(wantSeed.equals("true"))
 			{
-				// Read config.seed file and store values to memory
-				// File needs to be in the same directory as the program... see file for instructions
-				// Edit the file in Notepad, Notepad++, or a similar program
-				boolean ignore = false;
-				String firstSeedName = "#";
-				String firstSeed = "0";
-				String secondSeedName = "#";
-				String secondSeed = "0";
-				String thirdSeedName = "#";
-				String thirdSeed = "0";
-				String fourthSeedName = "#";
-				String fourthSeed = "0";
-				String fifthSeedName = "#";
-				String fifthSeed = "0";
-
-				ExpoInFile seedconfig = new ExpoInFile("config.seed");
-
-				while(!ignore)
-				{
-					firstSeedName = seedconfig.readString();
-					if(firstSeedName.indexOf("#") != -1) // determine which lines are commented
-					{
-						// Ignore the line
-					}
-					else
-					{
-						ignore = true;
-					}
-				}
-				ignore = false;
-				while(!ignore)
-				{
-					firstSeed = seedconfig.readString();
-					if(firstSeed.indexOf("#") != -1) // determine which lines are commented
-					{
-						// Ignore the line
-					}
-					else
-					{
-						ignore = true;
-					}
-				}
-				ignore = false;
-				while(!ignore)
-				{
-					secondSeedName = seedconfig.readString();
-					if(secondSeedName.indexOf("#") != -1) // determine which lines are commented
-					{
-						// Ignore the line
-					}
-					else
-					{
-						ignore = true;
-					}
-				}
-				ignore = false;
-				while(!ignore)
-				{
-					secondSeed = seedconfig.readString();
-					if(secondSeed.indexOf("#") != -1) // determine which lines are commented
-					{
-						// Ignore the line
-					}
-					else
-					{
-						ignore = true;
-					}
-				}
-				ignore = false;
-				while(!ignore)
-				{
-					thirdSeedName = seedconfig.readString();
-					if(thirdSeedName.indexOf("#") != -1) // determine which lines are commented
-					{
-						// Ignore the line
-					}
-					else
-					{
-						ignore = true;
-					}
-				}
-				ignore = false;
-				while(!ignore)
-				{
-					thirdSeed = seedconfig.readString();
-					if(thirdSeed.indexOf("#") != -1) // determine which lines are commented
-					{
-						// Ignore the line
-					}
-					else
-					{
-						ignore = true;
-					}
-				}
-				ignore = false;
-				while(!ignore)
-				{
-					fourthSeedName = seedconfig.readString();
-					if(fourthSeedName.indexOf("#") != -1) // determine which lines are commented
-					{
-						// Ignore the line
-					}
-					else
-					{
-						ignore = true;
-					}
-				}
-				ignore = false;
-				while(!ignore)
-				{
-					fourthSeed = seedconfig.readString();
-					if(fourthSeed.indexOf("#") != -1) // determine which lines are commented
-					{
-						// Ignore the line
-					}
-					else
-					{
-						ignore = true;
-					}
-				}
-				ignore = false;
-				while(!ignore)
-				{
-					fifthSeedName = seedconfig.readString();
-					if(fifthSeedName.indexOf("#") != -1) // determine which lines are commented
-					{
-						// Ignore the line
-					}
-					else
-					{
-						ignore = true;
-					}
-				}
-				ignore = false;
-				while(!ignore)
-				{
-					fifthSeed = seedconfig.readString();
-					if(fifthSeed.indexOf("#") != -1) // determine which lines are commented
-					{
-						// Ignore the line
-					}
-					else
-					{
-						ignore = true;
-					}
-				}
-				ignore = false;
+				// Manually define "preset seeds"
+				String firstSeedName = "Name 1";
+				String firstSeed = "1";
+				String secondSeedName = "Name 2";
+				String secondSeed = "2";
+				String thirdSeedName = "Name 3";
+				String thirdSeed = "3";
+				String fourthSeedName = "Name 4";
+				String fourthSeed = "4";
+				String fifthSeedName = "Name 5";
+				String fifthSeed = "5";
 				int firstSeedInt = Integer.parseInt(firstSeed);
 				int secondSeedInt = Integer.parseInt(secondSeed);
 				int thirdSeedInt = Integer.parseInt(thirdSeed);
 				int fourthSeedInt = Integer.parseInt(fourthSeed);
 				int fifthSeedInt = Integer.parseInt(fifthSeed);
-
-				// Convert seed values to int
-
-				seedconfig.closeFile();
 
 				// Display GUI
 				JDialog.setDefaultLookAndFeelDecorated(true);
